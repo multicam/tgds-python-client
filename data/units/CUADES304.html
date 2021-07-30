@@ -1,0 +1,893 @@
+
+
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-au" xml:lang="en-au">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" /><meta property="og:url" content="https://training.gov.au" /><meta property="og:type" content="website" /><meta property="og:title" content="training.gov.au" /><meta property="og:description" content="training.gov.au is the national register for training in Australia" /><meta property="og:image" content="https://training.gov.au/Content/images/training-logo-red-RGB-237.png" /><meta name="viewport" content="width=device-width" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" /><meta name="Description" content="Australian Government Department of Employment, Skills, Small and Family Business - Training.Gov.Au" /><meta name="Copyright" content="Copyright (©) 2011-2013 by Hammond Street Developments Pty. Ltd." /><meta name="Keywords" content="training, tp, vet, isc" />
+    
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/Content/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/Content/images/favicon.ico" />
+    
+    <link href="/Content/Styles/basicCcs?v=3tLGnpOWMiwB_AWMVhtDWAtmwLqoyQ3JZGYzkyusEsc1" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" media="print" href="/Content/Styles/print.css" />
+ 
+    <!--[if IE]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/IeStylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 9]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie9Stylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie8Stylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie7Stylesheet.css"/>
+    <![endif]-->
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie6Stylesheet.css"/>        
+    <![endif]-->
+    
+    <script type="text/javascript" src="/Scripts/jquery-1.4.3.js"></script>  
+
+
+    
+    <link rel="stylesheet" type="text/css" href="/TrainingComponentFiles/styles.css" /> <title>training.gov.au - CUADES304 - Source and apply design industry knowledge</title>        
+
+    <script type="text/javascript">
+    <!--
+        //toggle the display of history (querystring) in the export to pdf and doc links
+        function togglePrintHistory(flag) {
+            $("a[class^=linkPrint]").querystring({ displayHistory: flag });
+        }
+        
+       
+        $(document).ready(function () {
+            if (!(window.history && window.history.replaceState)) {
+                var theTagName = $('ul.breadcrumbs>li:last')[0].innerHTML;
+                var properSize = $.cookie(theTagName);
+                if (properSize) {
+                    $.cookie(theTagName,null);
+                    window.location.replace(properSize);
+                }
+            }
+
+            $(".history").hide();
+            $(".historyCheckbox").show();
+            togglePrintHistory(false);            
+
+  
+            $("#validationMessage").hide();
+
+            $("#comparisonForm").submit(function () {
+                var checked = $("input[type=checkbox][name='comparisonItem']:checked").length;
+                if (checked > 2) {
+                    $("#validationMessage").show();
+                    $("#validationMessage").text("You can only compare two items at a time.");
+                    return false;
+                }
+                if (checked < 2) {
+                    $("#validationMessage").show();
+                    $("#validationMessage").text("You have not selected enough items to compare. Please select two items and then click the Compare button.");
+                    return false;
+                }
+            });
+
+            $("#tableQualifications .t-grouping-header").hide();
+            $('a.t-ps-link').click(function () {
+                if (window.history && window.history.replaceState) {
+                    window.history.replaceState({}, '', this.href);
+                }
+                else
+                {
+                    var tempSection = $(this).closest('table').closest('div').attr('id');
+                    if (tempSection) {
+                        $.cookie(theTagName, this.href + '#' + tempSection);
+                    } else {
+                        $.cookie(theTagName, this.href);
+                    }
+                }
+                
+            });
+        });        
+    //-->
+    </script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl" : "http://www"); 
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-30207537-1']); 
+_gaq.push(['_trackPageview']); 
+(function(){
+var ga = document.createElement('script');
+ga.type = 'text/javascript';
+ga.async = true; 
+ga.src = gaJsHost + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);})();
+</script></head>
+<body>
+    <a onclick="topFunction()" id="scrollToTop" title="Back to top"><p class="scrollToTopText">^</p></a>
+    
+
+<script>
+    var lastFocus;
+    $(document).ready(function () {
+        $('a').focusout(function () {
+            lastFocus = this;
+        });
+    });
+
+    //Bad code to get around skipping anchor in IE
+    function SkipFocus() {
+        if (lastFocus != null) {
+            var ntabindex = parseFloat(lastFocus.getAttribute('tabindex'));
+            if (ntabindex == 3 || ntabindex == 4) {
+                var nextElem = $('[tabindex=6]').focus();
+                if (nextElem != null) {
+                    nextElem.focus();
+                }
+            } else if (ntabindex == 6) {
+                var prevElem;
+                
+                prevElem = $('[tabindex=4]');
+                
+                if (prevElem != null) {
+                    prevElem.focus();
+                }
+            }
+        }
+    }
+
+    //drop down menu events
+    $(document).ready(function() {
+        $(".menudropdowncontent>a").focus(function() {
+            $(this).parent().css("z-index", "100");
+        });
+
+        $(".menudropdowncontent>a").focusout(function() {
+            $(this).parent().css("z-index", "");
+        });
+
+        $(".menudropdowncontent>input").focus(function () {
+            $(this).parent().css("z-index", "100");
+        });
+
+        $(".menudropdowncontent>input").focusout(function () {
+            $(this).parent().css("z-index", "");
+        });
+    });
+
+    function SetHomePageToNew() {
+
+        var cookie = 'HomePage';
+
+        setCookieForHistory(cookie, 'New', 56);
+    }
+
+    function SetHomePageToCurrent() {
+        var cookie = 'HomePage';
+
+        setCookieForHistory(cookie, 'Current', 56);
+    }
+
+</script>
+                    
+<div id="page">        
+    
+    <div id="header" style="padding-top: 5px;"> 
+         
+        <div id="title">
+            <a href="/Home/Tga" tabindex="1" title="Link to home" id="TGALogo">
+            
+            <img src="/Content/images/training-logo-red-RGB-237.png" alt="training.gov.au - logo" />
+            </a>
+        </div>
+        <div id="accessibilityLinks">
+            <a href="#content" tabindex="2">Skip to content</a>
+            <a href="#navigation" tabindex="3">Skip to primary navigation</a>
+            
+                <a href="#breadcrumbnavigation" tabindex="4">Skip to breadcrumb navigation</a>
+            
+        </div>
+        <div id="headerLogoGov">
+            <img src="/Content/images/ausgov-stacked-w150.png" alt="Australian Government Logo" />
+        </div>
+
+        <div class="UpperMenu">
+            
+                    <a href="https://training.gov.au:443/Account/SignIn?returnUrl=/Training/Details/CUADES304" tabindex="7" title="Link to sign in">Sign in</a>
+                    <a href="/Home/About" tabindex="6">About us</a>
+        </div>
+        <div id="menucontainer">
+            <span class="skipLink"><a name="navigation" id="navigation" tabindex="5" onfocus="SkipFocus();">&nbsp;</a></span> <!-- onfocus="SkipFocus();" -->
+            <input type="checkbox" id="menu">
+            <label for="menu">&nbsp;</label>
+            <div id="menuleft"  class="navbar t-MenuHeader">
+                <a href="/Home/Tga" title="Link to Home" tabindex="8" class="HomeIcon"><span class="accessibilityOnly">Link to home.</span></a><a href="/Search"  title="Link to search" tabindex="9">Search</a><a href="/Reporting" tabindex="10" title="Link to reports">Reports</a><div class="menuDropDown">
+                    <a href="/Link" title="Link to resources" tabindex="11">Resources<span class="MenuArrow">&nbsp;&nbsp;&nbsp;</span></a>
+                    <div class="menudropdowncontent">
+                        <a href="/Link#AnchorAustralianGovernmentBodies" title="Link to Australian Government bodies resources" tabindex="12">Australian Government Bodies</a>
+                        <a href="/Link#TrainingPackageDevelopers" title="Link to Training Package Developers resources" tabindex="13">Training Package Developers</a>
+                        <a href="/Link#AnchorSTAs" title="Link to Regulatory Authorities resources" tabindex="14">Regulatory Authorities</a>
+                        <a href="/Link#AnchorRCABs" title="Link to State and Territory Government Training Departments resources" tabindex="15">State and Territory Government Training Departments</a>
+                        <a href="/Link#AnchorNationalVETWebsites" title="Link to National VET Websites resources" tabindex="16">National VET Websites</a>
+                    </div>
+                </div><div class="menuDropDown">
+                <a href="javascript:void(0)" tabindex="17">More<span class="MenuArrow">&nbsp;&nbsp;&nbsp;</span></a>
+                    <div class="menudropdowncontent">
+                        <a href="/Home/News" tabindex="18" title="Link to news">News</a><a href="/Home/Enquiry" tabindex="19" title="Link to frequently asked questions &amp; contact us">Frequently Asked Questions &amp; Contact Us</a>
+                    </div>
+                </div>
+                </div>
+                <div id="menuright"  class="navbar t-MenuHeader">
+                    
+                    <div style="padding: .25em .97em;">&nbsp;</div>
+            </div>
+            
+        </div>
+        
+    </div>        
+
+    
+    
+    <div id="layoutWrapper">
+        
+
+<div id="oneColLayout">
+    <div id="breadcrumbs">
+        <span class="skipLink"><a name="breadcrumbnavigation" id="breadcrumbnavigation">&nbsp;</a></span>
+        
+            <span class="accessibilityOnly">You are here: </span>
+            <ul class="breadcrumbs">
+	<li><a href="/">Home</a></li><li><a href="/Training">Training</a></li><li>CUADES304</li>
+</ul>
+    </div>
+    
+    <div id="newQuickHelpDiv"></div>
+    <div class="layoutContentWrapper" id="layoutContentWrapper">
+
+        <span class="skipLink">
+            <a name="content" id="content" tabindex="-1">&nbsp;</a>
+        </span>
+        <div id="headerPrint">&nbsp;</div>
+         
+
+
+        <div id="printButtons">
+            <a class="linkPrintDoc" href="/Training/DetailsPrint?NrtId=58922236-9d1f-44c7-b779-db99e58622cf&amp;NrtReleaseId=409d75d1-77d2-4caf-862b-21fd96666906&amp;Format=docx&amp;displayHistory=true" title="Export this information to Word">Export summary to Word</a>
+            <a class="linkPrintPdf" href="/Training/DetailsPrint?NrtId=58922236-9d1f-44c7-b779-db99e58622cf&amp;NrtReleaseId=409d75d1-77d2-4caf-862b-21fd96666906&amp;Format=pdf&amp;displayHistory=true" title="Export this information to PDF">Export summary to PDF</a>
+            <!--a href="/Training/DetailsPrint?NrtId=58922236-9d1f-44c7-b779-db99e58622cf&NrtReleaseId=409d75d1-77d2-4caf-862b-21fd96666906&Format=print" target="_blank" title="Print" class="linkPrintReport">Print</a-->
+            
+            <a class="linkEmail" href="/ChangeNotification/NotificationAdd?NrtId=58922236-9d1f-44c7-b779-db99e58622cf&amp;ReturnTo=TrainingDetails" id="lnkNotify" title="Notify me of changes to this Training component">Notify me of changes</a>
+            
+        </div>        
+        
+<h1>Unit of competency details</h1>
+<h2 style="clear: both;">CUADES304 - Source and apply design industry knowledge <span style="font-weight: normal">(Release 1)</span></h2>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".historyCheckbox").show();
+            //$("#displayHistoryLabel").bind("click", linkHistoryCheckbox);
+           
+        });
+
+        //function linkHistoryCheckbox() {
+        //    $("#displayHistory").attr("checked", !$("#displayHistory").attr("checked"));
+        //    $("#displayHistory").click();
+        //    $("#displayHistory").attr("checked", !$("#displayHistory").attr("checked"));
+        //    return false;
+        //}
+
+    </script> 
+    
+    
+<div class="outer">
+        <h2 class="legend">Summary</h2>
+        <div class="fieldset">
+            
+            
+            <div class="display-row">            
+                <div class="display-label">Usage recommendation:</div>
+                <div class="display-field">
+                    
+                    
+                        <span class="green">Current</span>
+
+                    
+                </div>
+                 
+            </div>
+             
+                  <div class="display-row">
+                      <div class="display-label">Mapping:</div>
+                      <div class="display-field-info">
+                          
+                          <div class="t-widget t-grid" id="tableMappings"><table cellspacing="0" summary="Table listing the mapping information for this unit of competency" title="Table listing Mapping information"><colgroup><col /><col /><col /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Mapping</th><th class="t-header" scope="col">Notes</th><th class="t-last-header t-header" scope="col">Date</th></tr></thead><tbody><tr><td>Supersedes and is equivalent to <a href="/Training/Details/BSBDES304" title="View details for BSBDES304">BSBDES304</a> - Source and apply design industry knowledge</td><td>&nbsp;</td><td class="t-last">15/Apr/2021</td></tr></tbody></table></div>
+                      </div>
+                  </div><br/>
+            <div class="display-row">
+                
+                <div class="display-row">            
+                    <div class="display-label">Release Status:</div>
+                    <div class="display-field">
+                        
+                            <span class="green">Current</span>
+
+                         
+            
+                    </div>
+                 
+                </div>
+                
+                <div class="display-label">Releases:</div>
+
+                <div class="display-field-info">
+                    <div class="display-field-info" style="vertical-align: middle;">
+                                     
+                    <div class="t-widget t-grid" id="tableReleaseHistory"><table cellspacing="0" summary="Table listing the release history of this unit of competency" title="Table listing of Releases"><colgroup><col /><col style="width:110px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Release</th><th class="t-last-header t-header" scope="col">Release date</th></tr></thead><tbody><tr><td><strong>1</strong><span class="accessibilityOnly"> 1 </span><strong> (this release)</strong></td><td class="t-last"> <strong>
+                                                                                                                                               16/Apr/2021</strong></td></tr></tbody></table></div>
+
+                    </div>
+
+                </div>
+            </div>
+                
+            <br/>    
+            
+            
+           
+            
+                       <div class="display-row">
+            <div class="display-label">Companion volumes:</div>
+            <div class="display-field-info">
+            Unit Of competency
+
+                    <ul style='padding-left: 20px;margin-top: 2px;margin-bottom: 4px;' title="List of companion volumes for the Unit Of competency ">
+                   
+            
+                                             <li><a href="https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5"
+                                                target="_blank" rel="noopener"
+                                                class="">Companion Volume Implementation Guide is found on VETNet</a></li></ul>
+            
+            Assessment requirements
+
+                    <ul style='padding-left: 20px;margin-top: 2px;margin-bottom: 4px;' title="List of companion volumes for the Assessment requirements ">
+                   
+            
+                                             <li><a href="https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5"
+                                                target="_blank" rel="noopener"
+                                                class="">Companion Volume Implementation Guide is found on VETNet</a></li></ul>
+            
+            </div></div><br/>
+                  
+       
+            <div class="display-row">     
+                <div class="display-label">Delivery:</div>       
+                <div class="display-field">
+                    <a href="/Search/SearchOrganisation?nrtCodeTitle=CUADES304&amp;scopeItem=Unit&amp;tabIndex=1&amp;ImplicitNrtScope=True&amp;orgSearchByScopeSubmit=Search&amp;IncludeUnregisteredRtosForScopeSearch=False">Find RTOs approved to deliver this unit of competency.</a>
+                </div>
+            </div>
+            
+        </div>
+            </div>   
+
+
+    <!-- Release specific information -->
+    
+
+    <div class="outer"><h3 class="legend">Training packages that include this unit</h3><div class="fieldset"><div class="t-widget t-grid" id="tableTrainingPackges"><table cellspacing="0" summary="Table listing Training packages that include this unit" title="Table listing Training packages that include this unit"><colgroup><col style="width:120px" /><col /><col style="width:120px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUADES304?tableTrainingPackges-orderBy=Code-asc" rel="nofollow">Code<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Training packages that include this unit by the Code column</span></a></th><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUADES304?tableTrainingPackges-orderBy=Title-asc" rel="nofollow">Title<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Training packages that include this unit by the Title column</span></a></th><th class="t-last-header t-header" scope="col">Release</th></tr></thead><tbody><tr><td><a href="/Training/Details/CUA" title="View details for training package code CUA">CUA<span class="accessibilityOnly"> - Creative Arts and Culture Training Package</span></a></td><td>Creative Arts and Culture Training Package&nbsp;</td><td class="t-last">5.0-5.1&nbsp;</td></tr></tbody></table></div></div></div><div class="outer"><h3 class="legend">Qualifications that include this unit</h3><div class="fieldset"><div class="t-widget t-grid" id="tableQualifications"><table cellspacing="0" summary="Table listing Qualifications that include this unit" title="Table listing Qualifications that include this unit"><colgroup><col style="width:120px" /><col /><col style="width:120px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUADES304?tableQualifications-orderBy=Code-asc" rel="nofollow">Code<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Qualifications that include this unit by the Code column</span></a></th><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUADES304?tableQualifications-orderBy=Title-asc" rel="nofollow">Title<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Qualifications that include this unit by the Title column</span></a></th><th class="t-last-header t-header" scope="col">Release</th></tr></thead><tbody><tr><td><a href="/Training/Details/CUA41120" title="View details for qualification code CUA41120">CUA41120<span class="accessibilityOnly"> - Certificate IV in Photography and Digital Imaging</span></a></td><td>Certificate IV in Photography and Digital Imaging</td><td class="t-last">1&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUA40420" title="View details for qualification code CUA40420">CUA40420<span class="accessibilityOnly"> - Certificate IV in Live Production and Technical Services</span></a></td><td>Certificate IV in Live Production and Technical Services</td><td class="t-last">1&nbsp;</td></tr><tr><td><a href="/Training/Details/CUA31120" title="View details for qualification code CUA31120">CUA31120<span class="accessibilityOnly"> - Certificate III in Visual Arts</span></a></td><td>Certificate III in Visual Arts</td><td class="t-last">1&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUA40720" title="View details for qualification code CUA40720">CUA40720<span class="accessibilityOnly"> - Certificate IV in Design</span></a></td><td>Certificate IV in Design</td><td class="t-last">1&nbsp;</td></tr><tr><td><a href="/Training/Details/CUA30420" title="View details for qualification code CUA30420">CUA30420<span class="accessibilityOnly"> - Certificate III in Live Production and Technical Services</span></a></td><td>Certificate III in Live Production and Technical Services</td><td class="t-last">1&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUA41320" title="View details for qualification code CUA41320">CUA41320<span class="accessibilityOnly"> - Certificate IV in Visual Arts</span></a></td><td>Certificate IV in Visual Arts</td><td class="t-last">1&nbsp;</td></tr><tr><td><a href="/Training/Details/CUA30520" title="View details for qualification code CUA30520">CUA30520<span class="accessibilityOnly"> - Certificate III in Aboriginal and/or Torres Strait Islander Cultural Arts</span></a></td><td>Certificate III in Aboriginal and/or Torres Strait Islander Cultural Arts</td><td class="t-last">1&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUA30720" title="View details for qualification code CUA30720">CUA30720<span class="accessibilityOnly"> - Certificate III in Design Fundamentals</span></a></td><td>Certificate III in Design Fundamentals</td><td class="t-last">1&nbsp;</td></tr><tr><td><a href="/Training/Details/CUA40620" title="View details for qualification code CUA40620">CUA40620<span class="accessibilityOnly"> - Certificate IV in Aboriginal and/or Torres Strait Islander Cultural Arts</span></a></td><td>Certificate IV in Aboriginal and/or Torres Strait Islander Cultural Arts</td><td class="t-last">1&nbsp;</td></tr></tbody><tfoot><tr><td class="t-pager-wrapper" colspan="3"><div class="t-status"><a class="t-icon t-refresh" href="/Training/Details/CUADES304" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" title="Refresh table content"><span class="accessibilityOnly">Refresh information in &#39;Table listing Qualifications that include this unit&#39;</span></a></div><div class="t-pager t-reset"><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" tabindex="-1" title="First Page"><span class="t-icon t-arrow-first">Navigate to first page in table listing Qualifications that include this unit.</span></a><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" tabindex="-1" title="Previous page"><span class="t-icon t-arrow-prev">Navigate to previous page in table listing Qualifications that include this unit.</span></a><div class="t-numeric"><span class="t-state-active" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();"><span class="accessibilityOnly">Navigate to page </span>1<span class="accessibilityOnly"> in table listing Qualifications that include this unit</span></span></div><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" tabindex="-1" title="Next page"><span class="t-icon t-arrow-next">Navigate to the next page in table listing Qualifications that include this unit.</span></a><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" tabindex="-1" title="Last Page"><span class="t-icon t-arrow-last">Navigate to the last page in table listing Qualifications that include this unit.</span></a></div><div class="t-pagesize-wrapper">Items per page <span class="t-pagesize-wrapper-selected">10</span> | <span class="">20</span> | <span class="">50</span> | <span class="">100</span></div><div class="t-status-text">Displaying items 1 - 9 of 9</div></td></tr></tfoot></table></div></div></div>  
+    <div class="outer">
+        <h2 class="legend">Classifications</h2>           
+        <div class="historyCheckbox" style="display:none;height:15px;margin-right:20px;">
+            <input type="checkbox" name="displayHistory" id="displayHistory" value="true" checked="checked" title="Display history (below each table)" />
+            <a href="#" id="displayHistoryLabel" style="cursor: pointer;">Display history</a>
+      
+        </div>  
+        <div class="clear"></div>
+        <div class="fieldset">
+            
+            <div class="t-widget t-grid" id="tableClassifications"><table cellspacing="0" summary="Table listing all current Classifications" title="Table listing all current Classifications"><colgroup><col /><col style="width:100px" /><col /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Scheme</th><th class="t-header" scope="col">Code</th><th class="t-last-header t-header" scope="col">Classification value</th></tr></thead><tbody><tr><td>ASCED Module/Unit of Competency Field of Education Identifier&nbsp;</td><td>100501&nbsp;</td><td class="t-last">Graphic Arts And Design Studies&nbsp;</td></tr></tbody></table></div>    
+            <div class="history" id="unitclassificationHistoryField">
+                <h3>Classification history</h3>
+                <div class="t-widget t-grid" id="tableClassificationsHistory"><table cellspacing="0" summary="Table listing complete Classifications history" title="Table listing complete Classifications history"><colgroup><col /><col style="width:100px" /><col /><col style="width:80px" /><col style="width:80px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Scheme</th><th class="t-header" scope="col">Code</th><th class="t-header" scope="col">Classification value</th><th class="t-header" scope="col">Start date</th><th class="t-last-header t-header" scope="col">End date</th></tr></thead><tbody><tr><td>ASCED Module/Unit of Competency Field of Education Identifier&nbsp;</td><td>100501&nbsp;</td><td>Graphic Arts And Design Studies&nbsp;</td><td>16/Apr/2021</td><td class="t-last">&nbsp;</td></tr></tbody></table></div>
+            </div>          
+        </div>
+    </div>   
+        
+
+<div class="accessibilityOnly">The content being displayed has been produced by a third party, while all attempts have been made to make this content as accessible as possible it cannot be guaranteed.  If you are encountering issues following the content on this page please consider downloading the content in its original form</div>
+
+
+<div class="outer">
+    <h2 class="legend">Content</h2>
+    <div class="fieldset">
+            
+    <div class="display-row"><div class="display-label">Compare:</div><div class="display-field-info">
+                 <a href="/Comparison/ComparisonWizard?nrtId=58922236-9d1f-44c7-b779-db99e58622cf" id="compareText" title="Starts comparison wizard">Compare content of this unit of competency with other releases or training components</a> 
+                       </div></div>
+                       
+                       
+
+        <div class="display-row">
+        
+        
+            <div class="display-label">Download:</div>
+            <div class="display-field-info">
+                                             <ul class="contentLinksShort" >
+                                                 
+                                               
+                                                 <li><a href="/TrainingComponentFiles/CUA/CUADES304_R1.docm"
+                                                target="_blank" rel="noopener"
+                                                class="linkWord"
+                                                title="Download Unit Of competency in Word format."><span class="accessibilityOnly">Download Unit Of competency in Word format.</span>Unit Of competency (1.26 MB)</a>
+                                             </li>
+                                               
+                                                 <li><a href="/TrainingComponentFiles/CUA/CUADES304_R1.pdf"
+                                                target="_blank" rel="noopener"
+                                                class="linkPdf"
+                                                title="Download Unit Of competency in PDF format."><span class="accessibilityOnly">Download Unit Of competency in PDF format.</span>Unit Of competency (196.57 KB)</a>
+                                             </li></ul>
+                                             <ul class="contentLinksShort" >
+                                                 
+                                               
+                                                 <li><a href="/TrainingComponentFiles/CUA/CUADES304_AssessmentRequirements_R1.docm"
+                                                target="_blank" rel="noopener"
+                                                class="linkWord"
+                                                title="Download Assessment requirements in Word format."><span class="accessibilityOnly">Download Assessment requirements in Word format.</span>Assessment requirements (1.26 MB)</a>
+                                             </li>
+                                               
+                                                 <li><a href="/TrainingComponentFiles/CUA/CUADES304_AssessmentRequirements_R1.pdf"
+                                                target="_blank" rel="noopener"
+                                                class="linkPdf"
+                                                title="Download Assessment requirements in PDF format."><span class="accessibilityOnly">Download Assessment requirements in PDF format.</span>Assessment requirements (185.19 KB)</a>
+                                             </li></ul>
+               
+               </div></div>
+               
+    </div>
+    
+    </div>
+    
+    <div class="content"><h1>Unit Of competency</h1><?xml-stylesheet type="text/xsl" href="AuthorIT.xslt"><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:tga="urn:my-scripts">
+  <body>
+    <h2>Modification History</h2>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="314">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Release</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="731">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Comments</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="314">
+          <P class="&#xA;                ait4">Release 1</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="731">
+          <P class="&#xA;                ait4">This version first released with CUA Creative Arts and Culture Training Package Version 5.0.</P>
+        </TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Application</h2>
+    <P class="&#xA;                ait4">This unit describes the skills and knowledge required to source, apply and update general knowledge of the design industry based on problem solving, aesthetics, materials and processes appropriately used within the design industry. It involves researching information on different features of the industry, applying it to one’s own work practice, and remaining up-to-date on industry practices. </P>
+    <P class="&#xA;                ait4">It applies to individuals who work under supervision and support the professional design process such as evaluating the nature of design.</P>
+    <P class="&#xA;                ait4">No licensing, legislative or certification requirements apply to this unit at the time of publication.</P>
+    <h2>Unit Sector</h2>
+    <P class="&#xA;                ait4">Design – Design Process</P>
+    <h2>Elements and Performance Criteria</h2>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="312">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">ELEMENT</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="758">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">PERFORMANCE CRITERIA</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="312">
+          <P class="&#xA;                ait4"><EM class="&#xA;                ait7">Elements describe the essential outcomes.</EM></P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="758">
+          <P class="&#xA;                ait4"><EM class="&#xA;                ait7">Performance criteria describe the performance needed to demonstrate achievement of the element.</EM></P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="312">
+          <P class="&#xA;                ait93">1. Source and apply information on the structure and operation of design industry</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="758">
+          <P class="&#xA;                ait93">1.1 Identify and analyse information on the design industry and professional design practice  </P>
+          <P class="&#xA;                ait93">1.2 Inform own design practice and work using knowledge of the design industry</P>
+          <P class="&#xA;                ait93">1.3 Obtain information on employment obligations and opportunities in the design industry </P>
+          <P class="&#xA;                ait93">1.4 Apply knowledge of employment obligations and opportunities within day-to-day work activities</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="312">
+          <P class="&#xA;                ait93">2. Seek information on new design technology</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="758">
+          <P class="&#xA;                ait93">2.1 Identify sources of information on new technology affecting different areas of design practice</P>
+          <P class="&#xA;                ait93">2.2 Investigate applicable technologies to assist required work performance </P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="312">
+          <P class="&#xA;                ait93">3. Update industry knowledge</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="758">
+          <P class="&#xA;                ait93">3.1 Identify and use opportunities to update knowledge of the design industry and monitor current issues of concern to the industry</P>
+          <P class="&#xA;                ait93">3.2 Share updated knowledge with colleagues and peer group as required, and incorporate into day-to-day work activities </P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="312">
+          <P class="&#xA;                ait93">4. Apply information on ethical and legal work practices</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="758">
+          <P class="&#xA;                ait93">4.1 Source information on ethical and legal work practices in the context of design  </P>
+          <P class="&#xA;                ait93">4.2 Share updated knowledge on ethical and legal work practice in day-to-day work activities  </P>
+        </TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Foundation Skills</h2>
+    <P class="&#xA;                ait4"><EM class="&#xA;                ait7">This section describes those language, literacy, numeracy and employment skills that are essential to performance but not explicit in the performance criteria.</EM></P>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="274">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">S</STRONG>&nbsp;<STRONG class="&#xA;                ait24">KILL</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="796">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">DESCRIPTION</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="274">
+          <P class="&#xA;                ait4">Reading</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" valign="middle" width="796"><ul class='ait13'><li>Evaluates different texts to determine legislative and regulatory requirements, and current industry practices </li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="274">
+          <P class="&#xA;                ait4">Writing</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" valign="middle" width="796"><ul class='ait13'><li>Produces different text types using applicable vocabulary, grammatical structure and referencing conventions </li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="274">
+          <P class="&#xA;                ait4">Oral Communication</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" valign="middle" width="796"><ul class='ait13'><li>Presents information using vocabulary, style and tone appropriate to audience </li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="274">
+          <P class="&#xA;                ait4">Numeracy</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" valign="middle" width="796"><ul class='ait13'><li>Identifies and comprehends numerical information in different familiar texts</li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="274">
+          <P class="&#xA;                ait4">Self-management</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" valign="middle" width="796"><ul class='ait13'><li>Takes some personal responsibility for adherence to legal, ethical and regulatory requirements</li>
+          <li>Takes responsibility for routine low-impact decisions within familiar situations</li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="274">
+          <P class="&#xA;                ait4">Planning and organising</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" valign="middle" width="796"><ul class='ait13'><li>Plans and organises required tasks  </li>
+          <li>Contributes to design of new approaches within immediate work environment</li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="274">
+          <P class="&#xA;                ait4">Technology</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" valign="middle" width="796"><ul class='ait13'><li>Completes routine tasks using common digital systems and tools</li></ul></TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Unit Mapping Information</h2>
+    <P class="&#xA;                ait4">Supersedes and is equivalent to BSBDES304 Source and apply design industry knowledge. </P>
+    <h2>Links</h2>
+    <P class="&#xA;                ait4">Companion Volume Implementation Guide is found on VETNet - <a href='https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5' target='_blank'>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5</a></P>
+  </body>
+</html></div>
+                 <div>&nbsp;</div>
+                 <hr/><div class="content"><h1>Assessment requirements</h1><?xml-stylesheet type="text/xsl" href="AuthorIT.xslt"><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:tga="urn:my-scripts">
+  <body>
+    <h2>Modification History</h2>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="314">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Release</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="731">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Comments</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="314">
+          <P class="&#xA;                ait4">Release 1</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="731">
+          <P class="&#xA;                ait4">This version first released with CUA Creative Arts and Culture Training Package Version 5.0.</P>
+        </TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Performance Evidence</h2>
+    <P class="&#xA;                ait4">The candidate must demonstrate the ability to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including evidence of the ability to:</P><ul class='ait13'><li>identify the following for working in the design industry and its application to own work:</li></ul><ul class='ait14'><li>employment obligations and opportunities</li>
+    <li>new technology</li>
+    <li>ethical and legal work practices.</li></ul><ul class='ait13'><li>participate in at least one open information sharing session with peers</li>
+    <li>investigate one or more new technologies and identify how they can affect and assist design output</li>
+    <li>identify and participate in at least one activity to maintain currency in design industry trends and practices.</li></ul><h2>Knowledge Evidence</h2>
+    <P class="&#xA;                ait4">The candidate must be able to demonstrate knowledge to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including knowledge of:</P><ul class='ait13'><li>relationship between design and allied industries design industry</li>
+    <li>impact of legislation, including intellectual property, on the design industry</li>
+    <li>ethical work practices in the design industry</li>
+    <li>current and emerging technologies used within the design industry</li>
+    <li>obligations of employers and employees in the design industry</li>
+    <li>key organisations that may provide advice or information about the design industry</li>
+    <li>sources of information on the design industry and ways of maintaining current industry knowledge.</li></ul><h2>Assessment Conditions</h2>
+    <P class="&#xA;                ait4">Skills in this unit must be demonstrated in a workplace or simulated environment where the conditions are typical of those in a working environment in this industry. </P>
+    <P class="&#xA;                ait4">This includes access to:</P><ul class='ait13'><li>sources of information on industry structure, business practices, technologies, and ethical, legal and intellectual property requirements.</li></ul><P class="&#xA;                ait93"></P>
+    <P class="&#xA;                ait4">Assessors of this unit must satisfy the requirements for assessors in applicable vocational education and training legislation, frameworks and/or standards.</P>
+    <h2>Links</h2>
+    <P class="&#xA;                ait4">Companion Volume Implementation Guide is found on VETNet - <a href='https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5' target='_blank'>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5</a></P>
+  </body>
+</html></div>
+
+        
+        
+        
+
+        <div class="backtotop">
+            <a href="#navigation" title="Scroll back to the top of this page.">Back to top</a>
+        </div>
+    </div>            
+
+    
+</div>
+
+
+    </div>
+
+    <script src="/bundles/javascript?v=0bvaoz-aqoEV7vRFj8ENmjlWun-BabCNm9njAhHyJRk1"></script>
+
+    <script type="text/javascript">
+        <!--
+        	var showAlertBoxes = true;
+        	var staticAssistant = false;
+        	var twoCol = false;
+
+            $(document).ready(function() {
+
+                shortcut.add("s", function() {
+                    window.location = "/Search";
+                    return false;
+	            },{
+	                'type':'keydown',
+                    'propagate':false,
+                    'disable_in_input':true,
+                    'target':document
+	            });
+
+                shortcut.add("h", function() {
+                    window.location = "/";
+                    return false;
+	            },{
+	                'type':'keydown',
+                    'propagate':false,
+                    'disable_in_input':true,
+                    'target':document
+	            });
+	            
+                $("body").bind("mousemove", function() {
+	                $("body").unbind("mousemove");
+	                showAlertBoxes = false;
+	            });	            
+
+                $('input').filter('$[value*=Submit]')
+                    .add($('input').filter('$[value*=submit]'))
+                    .add($('input').filter('$[value*=Add]'))
+                    .bind("click", function (e) {
+                    $("#fakelinktoerrormsg").focus();
+                    });
+
+
+                $('.SearchBoxLarge input[type=text]').keyup(
+                    function () {
+                        if ($(this).val() === "") {
+                            $(".SearchBoxLarge .deleteicon").removeClass('deleteiconshow');
+                        } else {
+                            $(".SearchBoxLarge .deleteicon").addClass('deleteiconshow');
+                        }
+                    }
+                );
+
+                if ($('.SearchBoxLarge input[type=text]:eq(1)').val() === "") {
+                    $(".SearchBoxLarge .deleteicon").removeClass('deleteiconshow');
+                } else {
+                        
+                    $(".SearchBoxLarge .deleteicon").addClass('deleteiconshow');
+                    }
+
+                $('input[id^="TgaSearch"]').autocomplete({
+                
+                    source: function (request, response) {
+                        var searchType = $("#searchType").val();
+
+                        if (searchType == null) {
+                            searchType = $("input[name='SearchType']:checked").val();
+                        }
+
+                        selecttext="";
+                        var url = '/Search/AjaxAutocompleteSearch?SearchType=' + searchType;
+                        $.ajax({
+                            type: "POST",
+                            url: url,
+                            dataType: "json",
+                            data: {
+                                searchType:searchType,
+                                text:$(this).get(0).term
+                            },
+                            success: function (data) {
+                                var array = data.error ? [] : $.map(data, function(m) {
+                                    return {
+                                        label: m.Text,
+                                        value: m.Value
+                                    };
+                                });
+                                response( array );
+                            }
+                        });
+                    },
+                    minLength: 3,
+                    select: function (event, ui) {
+                        var redirectUrl = "";
+                        selecttext = ui.item.label.split('-')[0];
+                        if ($("input[name='SearchType']:checked").val() == "Rto") {
+                            redirectUrl = '/Organisation/Details/' + ui.item.value;
+                        } else {
+                            redirectUrl = '/Training/Details/' + ui.item.value;
+                        }
+
+                        window.location.href = redirectUrl;
+                        
+                    },
+                    close: function (event, ui) {
+                        if (selecttext !=='') {
+                           
+                            $('input[id^="TgaSearch"]').val(selecttext);
+                        } 
+                    }
+                });
+               
+            });
+
+            //toggles the CSS, form and search field depending on what the user has selected
+            function ToggleSearchOption(option) {
+
+                if (option.value == "Nrt") {
+                    $("#toggler").attr("class", "toggleNrt");
+                    $("#togglerSearchBar").attr("class", "toggleNrt");
+                    $("#TgaSearchBarForm .SearchOptions #NrtSearchBar").attr('checked', 'checked');
+                    $("#TgaSearchForm .SearchOptions #Nrt").attr('checked', 'checked');
+                    $("#TgaSearchBarForm .SearchOptions #RtoSearchBar").attr('checked', false);
+                    $("#TgaSearchForm .SearchOptions #Rto").attr('checked', false);
+                    setCookieForHistory("TgaSearchOption", "Nrt", 365);
+
+                } else if (option.value == "Rto") {
+                    $("#toggler").attr("class", "toggleRto");
+                    $("#togglerSearchBar").attr("class", "toggleRto");
+                    $("#TgaSearchBarForm .SearchOptions #RtoSearchBar").attr('checked', 'checked');
+                    $("#TgaSearchForm .SearchOptions #Rto").attr('checked', 'checked');
+                    $("#TgaSearchBarForm .SearchOptions #NrtSearchBar").attr('checked', false);
+                    $("#TgaSearchForm .SearchOptions #Nrt").attr('checked', false);
+                    setCookieForHistory("TgaSearchOption", "Rto", 365);
+                }
+            }
+
+            //loads the last option the user selected when reloading for the CSS, form and search field depending on what the user has selected
+            $(document).ready(function () {
+                var searchSelected = getCookie("TgaSearchOption");
+
+                if (searchSelected === undefined || searchSelected == null || searchSelected.length <= 0) {
+                    searchSelected = "Nrt";
+                }
+
+                if (searchSelected == "Nrt") {
+                    $("#toggler").attr("class", "toggleNrt");
+                    $("#togglerSearchBar").attr("class", "toggleNrt");
+                    $("#TgaSearchBarForm .SearchOptions #NrtSearchBar").attr('checked', 'checked');
+                    $("#TgaSearchForm .SearchOptions #Nrt").attr('checked', 'checked');
+                    $("#TgaSearchBarForm .SearchOptions #RtoSearchBar").attr('checked', false);
+                    $("#TgaSearchForm .SearchOptions #Rto").attr('checked', false);
+                } else if (searchSelected == "Rto") {
+                    $("#toggler").attr("class", "toggleRto");
+                    $("#togglerSearchBar").attr("class", "toggleRto");
+                    $("#TgaSearchBarForm .SearchOptions #RtoSearchBar").attr('checked', 'checked');
+                    $("#TgaSearchForm .SearchOptions #Rto").attr('checked', 'checked');
+                    $("#TgaSearchBarForm .SearchOptions #NrtSearchBar").attr('checked', false);
+                    $("#TgaSearchForm .SearchOptions #Nrt").attr('checked', false);
+
+                }
+            });
+        //-->
+    </script>
+<script type="text/javascript">
+    <!--    
+    $(document).ready(function () {
+        if (getParameterByName("setFocus") != null) {
+            $("#" + getParameterByName("setFocus") + " a:first").focus();
+        }
+    });
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    //-->
+</script>
+        
+
+<link href="/Content/Styles/css?v=dD6LgwDLSgmoWMaB7XaWSmFJnKXUeH3CZ5_n1JFFCBk1" rel="stylesheet"/>
+<link type="text/css" href="/asset.axd?id=vQAAAB-LCAAAAAAABACrVkpRsoquVipQslJyzs8rSc0r0TcyMDTQM9YzNDQ0UNJRSgPL5wHlS1JzUosys_WS83Nz8_P0cjPz9JKLi4FK8pWsDGpja3VQjQkuqcxJLcZqQkl6IkKrIVBrrI5ScglYQUWJPkSmDMhFdUky0KnGZqZAhpJVSVFpai0ADM2Fk70AAAA%3d" rel="stylesheet"/>
+
+    <div id="layoutFooter">
+        <div id="footer">
+            <div id="logo">
+                <img src="/Content/images/stones-32x32-transparent.png" alt="TGA Logo stepping stones" />
+            </div>
+            <div id="version">
+                
+                [Site version 3.20.1.12]
+            </div>
+            <div id="siteLinks">
+                <ul>
+                    <li><a href="/Home/TermsOfUse">Terms of use</a></li>
+                    <li><a href="/Home/PrivacyPolicy">Privacy policy</a></li>
+                    <li><a href="/Home/Copyright">Copyright</a></li>
+                    <li><a href="/Home/SiteMap">Site Map</a></li>
+            </ul>
+            </div>                
+        </div>
+    </div>
+    </div><!--End of Page div-->
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.common.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.calendar.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.datepicker.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.editing.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.filtering.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.autocomplete.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.combobox.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.grouping.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.list.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function(){
+if (!jQuery.telerik) jQuery.telerik = {};
+jQuery.telerik.cultureInfo={"shortDate":"dd/MMM/yyyy","longDate":"dddd, d MMMM yyyy","longTime":"h:mm:ss tt","shortTime":"h:mm tt","fullDateTime":"dddd, d MMMM yyyy h:mm:ss tt","sortableDateTime":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","universalSortableDateTime":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","generalDateShortTime":"dd/MMM/yyyy h:mm tt","generalDateTime":"dd/MMM/yyyy h:mm:ss tt","monthDay":"d MMMM","monthYear":"MMMM yyyy","days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"abbrDays":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"abbrMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"months":["January","February","March","April","May","June","July","August","September","October","November","December",""],"am":"AM","pm":"PM","dateSeparator":"/","timeSeparator":":","currencydecimaldigits":2,"currencydecimalseparator":".","currencygroupseparator":",","currencygroupsize":3,"currencynegative":1,"currencypositive":0,"currencysymbol":"$","numericdecimaldigits":2,"numericdecimalseparator":".","numericgroupseparator":",","numericgroupsize":3,"numericnegative":1,"percentdecimaldigits":2,"percentdecimalseparator":".","percentgroupseparator":",","percentgroupsize":3,"percentnegative":1,"percentpositive":1,"percentsymbol":"%"};
+jQuery('#tableMappings').tGrid({columns:[{},{"title":"Notes","member":"Notes","type":"String"},{"title":"Date","member":"MappingDate","type":"Date","format":"{0:d}"}], urlFormat:'/Training/Details/CUADES304', pageSize:0});
+jQuery('#tableReleaseHistory').tGrid({columns:[{},{}], urlFormat:'/Training/Details/CUADES304', pageSize:0});
+jQuery('#tableUnitContextualisations').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for unit contextualisation \u003c#= Title #\u003e\"\u003eDetails\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e"},{"template":"\u003c#= Title #\u003e","title":"Title","member":"Title","type":"String"}], pageSize:0, ajax:{"selectUrl":"/Training/AjaxGetUnitUnitContextualisations/CUADES304?releaseId=409d75d1-77d2-4caf-862b-21fd96666906"}});
+jQuery('#tableTrainingPackges').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for training package code \u003c#= Code #\u003e\"\u003e\u003c#= Code #\u003e\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e","title":"Code","member":"Code","type":"String"},{"title":"Title","member":"Title","type":"String"},{"title":"Release","member":"Releases","type":"String"}], pageSize:0, sortMode:'single', ajax:{"selectUrl":"/Training/AjaxGetReleaseTrainingPackages/CUADES304?releaseId=409d75d1-77d2-4caf-862b-21fd96666906"}});
+jQuery('#tableQualifications').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for qualification code \u003c#= Code #\u003e\"\u003e\u003c#= Code #\u003e\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e","title":"Code","member":"Code","type":"String"},{"template":"\u003c#= Title#\u003e   \u003c# if (IsConfidential) {#\u003e\u003cimg src=\"/Content/images/Confidential_Icon.png\" class=\"ConfidentialFlagIcon\"  alt=\"Confidential Qualification\" onmouseout=\"$(this).next().css(\u0027display\u0027, \u0027none\u0027);\" onmouseover=\"$(this).next().css(\u0027display\u0027, \u0027inline\u0027);\" /\u003e\u003cspan class=\"tooltiptext\" style=\u0027display:none;\u0027\u003eConfidential Qualification\u003c/span\u003e \u003c#}#\u003e","title":"Title","member":"Title","type":"String"},{"title":"Release","member":"Releases","type":"String"}], total:9, currentPage:1, sortMode:'single', ajax:{"selectUrl":"/Training/AjaxGetUnitQualifications/CUADES304"}});
+jQuery('#tableSkillSets').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for skill set \u003c#= Title #\u003e\"\u003e\u003c#= Code#\u003e\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e","title":"Code","member":"Code","type":"String"},{"template":"\u003c#= Title#\u003e   \u003c# if (IsConfidential) {#\u003e\u003cimg src=\"/Content/images/Confidential_Icon.png\" class=\"ConfidentialFlagIcon\"  alt=\"Confidential Skill Set\" onmouseout=\"$(this).next().css(\u0027display\u0027, \u0027none\u0027);\" onmouseover=\"$(this).next().css(\u0027display\u0027, \u0027inline\u0027);\" /\u003e\u003cspan class=\"tooltiptext\" style=\u0027display:none;\u0027\u003eConfidential Skill Set\u003c/span\u003e \u003c#}#\u003e","title":"Title","member":"Title","type":"String"},{"title":"Release","member":"Releases","type":"String"}], total:0, currentPage:1, sortMode:'single', ajax:{"selectUrl":"/Training/AjaxGetUnitSkillSets/CUADES304"}});
+jQuery('#tableTrainingPackges').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for training package code \u003c#= Code #\u003e\"\u003e\u003c#= Code #\u003e\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e","title":"Code","member":"Code","type":"String"},{"title":"Title","member":"Title","type":"String"}], pageSize:0, sortMode:'single', ajax:{"selectUrl":"/Training/AjaxGetUnitAccreditedCourses/CUADES304?releaseId=409d75d1-77d2-4caf-862b-21fd96666906"}});
+jQuery('#tableClassifications').tGrid({columns:[{"title":"Scheme","member":"Value.Scheme.Description","type":"String"},{"title":"Code","member":"Value.Value","type":"String"},{"title":"Classification value","member":"Value.Name","type":"String"}], urlFormat:'/Training/Details/CUADES304', pageSize:0});
+jQuery('#tableClassificationsHistory').tGrid({columns:[{"title":"Scheme","member":"Value.Scheme.Description","type":"String"},{"title":"Code","member":"Value.Value","type":"String"},{"title":"Classification value","member":"Value.Name","type":"String"},{"title":"Start date","member":"StartDate","type":"Date","format":"{0:d}"},{"title":"End date","member":"EndDate","type":"Date","format":"{0:d}"}], urlFormat:'/Training/Details/CUADES304', pageSize:0});});
+//]]>
+</script>
+</body>
+</html>

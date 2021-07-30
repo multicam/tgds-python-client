@@ -1,0 +1,958 @@
+
+
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-au" xml:lang="en-au">
+<head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" /><meta property="og:url" content="https://training.gov.au" /><meta property="og:type" content="website" /><meta property="og:title" content="training.gov.au" /><meta property="og:description" content="training.gov.au is the national register for training in Australia" /><meta property="og:image" content="https://training.gov.au/Content/images/training-logo-red-RGB-237.png" /><meta name="viewport" content="width=device-width" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" /><meta name="Description" content="Australian Government Department of Employment, Skills, Small and Family Business - Training.Gov.Au" /><meta name="Copyright" content="Copyright (©) 2011-2013 by Hammond Street Developments Pty. Ltd." /><meta name="Keywords" content="training, tp, vet, isc" />
+    
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/Content/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/Content/images/favicon.ico" />
+    
+    <link href="/Content/Styles/basicCcs?v=3tLGnpOWMiwB_AWMVhtDWAtmwLqoyQ3JZGYzkyusEsc1" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" media="print" href="/Content/Styles/print.css" />
+ 
+    <!--[if IE]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/IeStylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 9]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie9Stylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie8Stylesheet.css"/>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie7Stylesheet.css"/>
+    <![endif]-->
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" media="screen" type="text/css" href="/Content/Styles/Ie6Stylesheet.css"/>        
+    <![endif]-->
+    
+    <script type="text/javascript" src="/Scripts/jquery-1.4.3.js"></script>  
+
+
+    
+    <link rel="stylesheet" type="text/css" href="/TrainingComponentFiles/styles.css" /> <title>training.gov.au - CUAPHI403 - Enhance, manipulate and output photo images</title>        
+
+    <script type="text/javascript">
+    <!--
+        //toggle the display of history (querystring) in the export to pdf and doc links
+        function togglePrintHistory(flag) {
+            $("a[class^=linkPrint]").querystring({ displayHistory: flag });
+        }
+        
+       
+        $(document).ready(function () {
+            if (!(window.history && window.history.replaceState)) {
+                var theTagName = $('ul.breadcrumbs>li:last')[0].innerHTML;
+                var properSize = $.cookie(theTagName);
+                if (properSize) {
+                    $.cookie(theTagName,null);
+                    window.location.replace(properSize);
+                }
+            }
+
+            $(".history").hide();
+            $(".historyCheckbox").show();
+            togglePrintHistory(false);            
+
+  
+            $("#validationMessage").hide();
+
+            $("#comparisonForm").submit(function () {
+                var checked = $("input[type=checkbox][name='comparisonItem']:checked").length;
+                if (checked > 2) {
+                    $("#validationMessage").show();
+                    $("#validationMessage").text("You can only compare two items at a time.");
+                    return false;
+                }
+                if (checked < 2) {
+                    $("#validationMessage").show();
+                    $("#validationMessage").text("You have not selected enough items to compare. Please select two items and then click the Compare button.");
+                    return false;
+                }
+            });
+
+            $("#tableQualifications .t-grouping-header").hide();
+            $('a.t-ps-link').click(function () {
+                if (window.history && window.history.replaceState) {
+                    window.history.replaceState({}, '', this.href);
+                }
+                else
+                {
+                    var tempSection = $(this).closest('table').closest('div').attr('id');
+                    if (tempSection) {
+                        $.cookie(theTagName, this.href + '#' + tempSection);
+                    } else {
+                        $.cookie(theTagName, this.href);
+                    }
+                }
+                
+            });
+        });        
+    //-->
+    </script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl" : "http://www"); 
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-30207537-1']); 
+_gaq.push(['_trackPageview']); 
+(function(){
+var ga = document.createElement('script');
+ga.type = 'text/javascript';
+ga.async = true; 
+ga.src = gaJsHost + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);})();
+</script></head>
+<body>
+    <a onclick="topFunction()" id="scrollToTop" title="Back to top"><p class="scrollToTopText">^</p></a>
+    
+
+<script>
+    var lastFocus;
+    $(document).ready(function () {
+        $('a').focusout(function () {
+            lastFocus = this;
+        });
+    });
+
+    //Bad code to get around skipping anchor in IE
+    function SkipFocus() {
+        if (lastFocus != null) {
+            var ntabindex = parseFloat(lastFocus.getAttribute('tabindex'));
+            if (ntabindex == 3 || ntabindex == 4) {
+                var nextElem = $('[tabindex=6]').focus();
+                if (nextElem != null) {
+                    nextElem.focus();
+                }
+            } else if (ntabindex == 6) {
+                var prevElem;
+                
+                prevElem = $('[tabindex=4]');
+                
+                if (prevElem != null) {
+                    prevElem.focus();
+                }
+            }
+        }
+    }
+
+    //drop down menu events
+    $(document).ready(function() {
+        $(".menudropdowncontent>a").focus(function() {
+            $(this).parent().css("z-index", "100");
+        });
+
+        $(".menudropdowncontent>a").focusout(function() {
+            $(this).parent().css("z-index", "");
+        });
+
+        $(".menudropdowncontent>input").focus(function () {
+            $(this).parent().css("z-index", "100");
+        });
+
+        $(".menudropdowncontent>input").focusout(function () {
+            $(this).parent().css("z-index", "");
+        });
+    });
+
+    function SetHomePageToNew() {
+
+        var cookie = 'HomePage';
+
+        setCookieForHistory(cookie, 'New', 56);
+    }
+
+    function SetHomePageToCurrent() {
+        var cookie = 'HomePage';
+
+        setCookieForHistory(cookie, 'Current', 56);
+    }
+
+</script>
+                    
+<div id="page">        
+    
+    <div id="header" style="padding-top: 5px;"> 
+         
+        <div id="title">
+            <a href="/Home/Tga" tabindex="1" title="Link to home" id="TGALogo">
+            
+            <img src="/Content/images/training-logo-red-RGB-237.png" alt="training.gov.au - logo" />
+            </a>
+        </div>
+        <div id="accessibilityLinks">
+            <a href="#content" tabindex="2">Skip to content</a>
+            <a href="#navigation" tabindex="3">Skip to primary navigation</a>
+            
+                <a href="#breadcrumbnavigation" tabindex="4">Skip to breadcrumb navigation</a>
+            
+        </div>
+        <div id="headerLogoGov">
+            <img src="/Content/images/ausgov-stacked-w150.png" alt="Australian Government Logo" />
+        </div>
+
+        <div class="UpperMenu">
+            
+                    <a href="https://training.gov.au:443/Account/SignIn?returnUrl=/Training/Details/CUAPHI403" tabindex="7" title="Link to sign in">Sign in</a>
+                    <a href="/Home/About" tabindex="6">About us</a>
+        </div>
+        <div id="menucontainer">
+            <span class="skipLink"><a name="navigation" id="navigation" tabindex="5" onfocus="SkipFocus();">&nbsp;</a></span> <!-- onfocus="SkipFocus();" -->
+            <input type="checkbox" id="menu">
+            <label for="menu">&nbsp;</label>
+            <div id="menuleft"  class="navbar t-MenuHeader">
+                <a href="/Home/Tga" title="Link to Home" tabindex="8" class="HomeIcon"><span class="accessibilityOnly">Link to home.</span></a><a href="/Search"  title="Link to search" tabindex="9">Search</a><a href="/Reporting" tabindex="10" title="Link to reports">Reports</a><div class="menuDropDown">
+                    <a href="/Link" title="Link to resources" tabindex="11">Resources<span class="MenuArrow">&nbsp;&nbsp;&nbsp;</span></a>
+                    <div class="menudropdowncontent">
+                        <a href="/Link#AnchorAustralianGovernmentBodies" title="Link to Australian Government bodies resources" tabindex="12">Australian Government Bodies</a>
+                        <a href="/Link#TrainingPackageDevelopers" title="Link to Training Package Developers resources" tabindex="13">Training Package Developers</a>
+                        <a href="/Link#AnchorSTAs" title="Link to Regulatory Authorities resources" tabindex="14">Regulatory Authorities</a>
+                        <a href="/Link#AnchorRCABs" title="Link to State and Territory Government Training Departments resources" tabindex="15">State and Territory Government Training Departments</a>
+                        <a href="/Link#AnchorNationalVETWebsites" title="Link to National VET Websites resources" tabindex="16">National VET Websites</a>
+                    </div>
+                </div><div class="menuDropDown">
+                <a href="javascript:void(0)" tabindex="17">More<span class="MenuArrow">&nbsp;&nbsp;&nbsp;</span></a>
+                    <div class="menudropdowncontent">
+                        <a href="/Home/News" tabindex="18" title="Link to news">News</a><a href="/Home/Enquiry" tabindex="19" title="Link to frequently asked questions &amp; contact us">Frequently Asked Questions &amp; Contact Us</a>
+                    </div>
+                </div>
+                </div>
+                <div id="menuright"  class="navbar t-MenuHeader">
+                    
+                    <div style="padding: .25em .97em;">&nbsp;</div>
+            </div>
+            
+        </div>
+        
+    </div>        
+
+    
+    
+    <div id="layoutWrapper">
+        
+
+<div id="oneColLayout">
+    <div id="breadcrumbs">
+        <span class="skipLink"><a name="breadcrumbnavigation" id="breadcrumbnavigation">&nbsp;</a></span>
+        
+            <span class="accessibilityOnly">You are here: </span>
+            <ul class="breadcrumbs">
+	<li><a href="/">Home</a></li><li><a href="/Training">Training</a></li><li>CUAPHI403</li>
+</ul>
+    </div>
+    
+    <div id="newQuickHelpDiv"></div>
+    <div class="layoutContentWrapper" id="layoutContentWrapper">
+
+        <span class="skipLink">
+            <a name="content" id="content" tabindex="-1">&nbsp;</a>
+        </span>
+        <div id="headerPrint">&nbsp;</div>
+         
+
+
+        <div id="printButtons">
+            <a class="linkPrintDoc" href="/Training/DetailsPrint?NrtId=dbbf00b5-1897-4423-b113-687be1ce71f5&amp;NrtReleaseId=bf5b2a06-2973-4514-ad2e-7b9e8423ff6c&amp;Format=docx&amp;displayHistory=true" title="Export this information to Word">Export summary to Word</a>
+            <a class="linkPrintPdf" href="/Training/DetailsPrint?NrtId=dbbf00b5-1897-4423-b113-687be1ce71f5&amp;NrtReleaseId=bf5b2a06-2973-4514-ad2e-7b9e8423ff6c&amp;Format=pdf&amp;displayHistory=true" title="Export this information to PDF">Export summary to PDF</a>
+            <!--a href="/Training/DetailsPrint?NrtId=dbbf00b5-1897-4423-b113-687be1ce71f5&NrtReleaseId=bf5b2a06-2973-4514-ad2e-7b9e8423ff6c&Format=print" target="_blank" title="Print" class="linkPrintReport">Print</a-->
+            
+            <a class="linkEmail" href="/ChangeNotification/NotificationAdd?NrtId=dbbf00b5-1897-4423-b113-687be1ce71f5&amp;ReturnTo=TrainingDetails" id="lnkNotify" title="Notify me of changes to this Training component">Notify me of changes</a>
+            
+        </div>        
+        
+<h1>Unit of competency details</h1>
+<h2 style="clear: both;">CUAPHI403 - Enhance, manipulate and output photo images <span style="font-weight: normal">(Release 1)</span></h2>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".historyCheckbox").show();
+            //$("#displayHistoryLabel").bind("click", linkHistoryCheckbox);
+           
+        });
+
+        //function linkHistoryCheckbox() {
+        //    $("#displayHistory").attr("checked", !$("#displayHistory").attr("checked"));
+        //    $("#displayHistory").click();
+        //    $("#displayHistory").attr("checked", !$("#displayHistory").attr("checked"));
+        //    return false;
+        //}
+
+    </script> 
+    
+    
+<div class="outer">
+        <h2 class="legend">Summary</h2>
+        <div class="fieldset">
+            
+            
+            <div class="display-row">            
+                <div class="display-label">Usage recommendation:</div>
+                <div class="display-field">
+                    
+                    
+                        <span class="green">Current</span>
+
+                    
+                </div>
+                 
+            </div>
+             
+                  <div class="display-row">
+                      <div class="display-label">Mapping:</div>
+                      <div class="display-field-info">
+                          
+                          <div class="t-widget t-grid" id="tableMappings"><table cellspacing="0" summary="Table listing the mapping information for this unit of competency" title="Table listing Mapping information"><colgroup><col /><col /><col /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Mapping</th><th class="t-header" scope="col">Notes</th><th class="t-last-header t-header" scope="col">Date</th></tr></thead><tbody><tr><td>Supersedes and is equivalent to <a href="/Training/Details/CUVPHI404A" title="View details for CUVPHI404A">CUVPHI404A</a> - Enhance, manipulate and output photo images</td><td>Updated to meet Standards for Training Packages.
+Minor edits to elements and performance criteria.&nbsp;</td><td class="t-last">14/Jan/2016</td></tr></tbody></table></div>
+                      </div>
+                  </div><br/>
+            <div class="display-row">
+                
+                <div class="display-row">            
+                    <div class="display-label">Release Status:</div>
+                    <div class="display-field">
+                        
+                            <span class="green">Current</span>
+
+                         
+            
+                    </div>
+                 
+                </div>
+                
+                <div class="display-label">Releases:</div>
+
+                <div class="display-field-info">
+                    <div class="display-field-info" style="vertical-align: middle;">
+                                     
+                    <div class="t-widget t-grid" id="tableReleaseHistory"><table cellspacing="0" summary="Table listing the release history of this unit of competency" title="Table listing of Releases"><colgroup><col /><col style="width:110px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Release</th><th class="t-last-header t-header" scope="col">Release date</th></tr></thead><tbody><tr><td><strong>1</strong><span class="accessibilityOnly"> 1 </span><strong> (this release)</strong></td><td class="t-last"> <strong>
+                                                                                                                                               15/Jan/2016</strong></td></tr></tbody></table></div>
+
+                    </div>
+
+                </div>
+            </div>
+                
+            <br/>    
+            
+            
+           
+            
+                       <div class="display-row">
+            <div class="display-label">Companion volumes:</div>
+            <div class="display-field-info">
+            Unit Of competency
+
+                    <ul style='padding-left: 20px;margin-top: 2px;margin-bottom: 4px;' title="List of companion volumes for the Unit Of competency ">
+                   
+            
+                                             <li><a href="https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5"
+                                                target="_blank" rel="noopener"
+                                                class="">Companion Volume implementation guides are found in VETNet</a></li></ul>
+            
+            Assessment requirements
+
+                    <ul style='padding-left: 20px;margin-top: 2px;margin-bottom: 4px;' title="List of companion volumes for the Assessment requirements ">
+                   
+            
+                                             <li><a href="https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5"
+                                                target="_blank" rel="noopener"
+                                                class="">Companion Volume implementation guides are found in VETNet</a></li></ul>
+            
+            </div></div><br/>
+                  
+       
+            <div class="display-row">     
+                <div class="display-label">Delivery:</div>       
+                <div class="display-field">
+                    <a href="/Search/SearchOrganisation?nrtCodeTitle=CUAPHI403&amp;scopeItem=Unit&amp;tabIndex=1&amp;ImplicitNrtScope=True&amp;orgSearchByScopeSubmit=Search&amp;IncludeUnregisteredRtosForScopeSearch=False">Find RTOs approved to deliver this unit of competency.</a>
+                </div>
+            </div>
+            
+        </div>
+            </div>   
+
+
+    <!-- Release specific information -->
+    
+
+    <div class="outer"><h3 class="legend">Training packages that include this unit</h3><div class="fieldset"><div class="t-widget t-grid" id="tableTrainingPackges"><table cellspacing="0" summary="Table listing Training packages that include this unit" title="Table listing Training packages that include this unit"><colgroup><col style="width:120px" /><col /><col style="width:120px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUAPHI403?tableTrainingPackges-orderBy=Code-asc" rel="nofollow">Code<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Training packages that include this unit by the Code column</span></a></th><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUAPHI403?tableTrainingPackges-orderBy=Title-asc" rel="nofollow">Title<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Training packages that include this unit by the Title column</span></a></th><th class="t-last-header t-header" scope="col">Release</th></tr></thead><tbody><tr><td><a href="/Training/Details/CUA" title="View details for training package code CUA">CUA<span class="accessibilityOnly"> - Creative Arts and Culture Training Package</span></a></td><td>Creative Arts and Culture Training Package&nbsp;</td><td class="t-last">2.0-5.1&nbsp;</td></tr></tbody></table></div></div></div><div class="outer"><h3 class="legend">Qualifications that include this unit</h3><div class="fieldset"><div class="t-widget t-grid" id="tableQualifications"><table cellspacing="0" summary="Table listing Qualifications that include this unit" title="Table listing Qualifications that include this unit"><colgroup><col style="width:120px" /><col /><col style="width:120px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUAPHI403?tableQualifications-orderBy=Code-asc" rel="nofollow">Code<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Qualifications that include this unit by the Code column</span></a></th><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUAPHI403?tableQualifications-orderBy=Title-asc" rel="nofollow">Title<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Qualifications that include this unit by the Title column</span></a></th><th class="t-last-header t-header" scope="col">Release</th></tr></thead><tbody><tr><td><a href="/Training/Details/CUA40615" title="View details for qualification code CUA40615">CUA40615<span class="accessibilityOnly"> - Certificate IV in Aboriginal and Torres Strait Islander Cultural Arts</span></a></td><td>Certificate IV in Aboriginal and Torres Strait Islander Cultural Arts</td><td class="t-last">1-2&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUA41120" title="View details for qualification code CUA41120">CUA41120<span class="accessibilityOnly"> - Certificate IV in Photography and Digital Imaging</span></a></td><td>Certificate IV in Photography and Digital Imaging</td><td class="t-last">1&nbsp;</td></tr><tr><td><a href="/Training/Details/CUA40715" title="View details for qualification code CUA40715">CUA40715<span class="accessibilityOnly"> - Certificate IV in Design</span></a></td><td>Certificate IV in Design</td><td class="t-last">1-2&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUA40720" title="View details for qualification code CUA40720">CUA40720<span class="accessibilityOnly"> - Certificate IV in Design</span></a></td><td>Certificate IV in Design</td><td class="t-last">1&nbsp;</td></tr><tr><td><a href="/Training/Details/CUA41115" title="View details for qualification code CUA41115">CUA41115<span class="accessibilityOnly"> - Certificate IV in Photography and Photo Imaging</span></a></td><td>Certificate IV in Photography and Photo Imaging</td><td class="t-last">1-2&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUA41315" title="View details for qualification code CUA41315">CUA41315<span class="accessibilityOnly"> - Certificate IV in Visual Arts</span></a></td><td>Certificate IV in Visual Arts</td><td class="t-last">1-2&nbsp;</td></tr><tr><td><a href="/Training/Details/CUA41320" title="View details for qualification code CUA41320">CUA41320<span class="accessibilityOnly"> - Certificate IV in Visual Arts</span></a></td><td>Certificate IV in Visual Arts</td><td class="t-last">1&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUA40620" title="View details for qualification code CUA40620">CUA40620<span class="accessibilityOnly"> - Certificate IV in Aboriginal and/or Torres Strait Islander Cultural Arts</span></a></td><td>Certificate IV in Aboriginal and/or Torres Strait Islander Cultural Arts</td><td class="t-last">1&nbsp;</td></tr></tbody><tfoot><tr><td class="t-pager-wrapper" colspan="3"><div class="t-status"><a class="t-icon t-refresh" href="/Training/Details/CUAPHI403" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" title="Refresh table content"><span class="accessibilityOnly">Refresh information in &#39;Table listing Qualifications that include this unit&#39;</span></a></div><div class="t-pager t-reset"><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" tabindex="-1" title="First Page"><span class="t-icon t-arrow-first">Navigate to first page in table listing Qualifications that include this unit.</span></a><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" tabindex="-1" title="Previous page"><span class="t-icon t-arrow-prev">Navigate to previous page in table listing Qualifications that include this unit.</span></a><div class="t-numeric"><span class="t-state-active" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();"><span class="accessibilityOnly">Navigate to page </span>1<span class="accessibilityOnly"> in table listing Qualifications that include this unit</span></span></div><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" tabindex="-1" title="Next page"><span class="t-icon t-arrow-next">Navigate to the next page in table listing Qualifications that include this unit.</span></a><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableQualifications a:first&#39;).focus();" tabindex="-1" title="Last Page"><span class="t-icon t-arrow-last">Navigate to the last page in table listing Qualifications that include this unit.</span></a></div><div class="t-pagesize-wrapper">Items per page <span class="t-pagesize-wrapper-selected">10</span> | <span class="">20</span> | <span class="">50</span> | <span class="">100</span></div><div class="t-status-text">Displaying items 1 - 8 of 8</div></td></tr></tfoot></table></div></div></div><div class="outer"><h3 class="legend">Skill sets that include this unit</h3><div class="fieldset"><div class="t-widget t-grid" id="tableSkillSets"><table cellspacing="0" summary="Table listing Skill sets that include this unit" title="Table listing Skill sets that include this unit"><colgroup><col style="width:120px" /><col /><col style="width:120px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUAPHI403?tableSkillSets-orderBy=Code-asc" rel="nofollow">Code<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Skill sets that include this unit by the Code column</span></a></th><th class="t-header" scope="col"><a class="t-link" href="/Training/Details/CUAPHI403?tableSkillSets-orderBy=Title-asc" rel="nofollow">Title<span class="t-icon t-arrow-up" style="display: none;"></span><span class="accessibilityOnly">Sort Table listing Skill sets that include this unit by the Title column</span></a></th><th class="t-last-header t-header" scope="col">Release</th></tr></thead><tbody><tr><td><a href="/Training/Details/CUASS00106" title="View details for skill set Preparatory Skill Set for Professional Photo Imaging Practice Skill Set">CUASS00106<span class="accessibilityOnly"> - Preparatory Skill Set for Professional Photo Imaging Practice Skill Set</span></a></td><td>Preparatory Skill Set for Professional Photo Imaging Practice Skill Set</td><td class="t-last">1&nbsp;</td></tr><tr class="t-alt"><td><a href="/Training/Details/CUASS00050" title="View details for skill set Preparatory Skill Set for Professional Photo Imaging Practice">CUASS00050<span class="accessibilityOnly"> - Preparatory Skill Set for Professional Photo Imaging Practice</span></a></td><td>Preparatory Skill Set for Professional Photo Imaging Practice</td><td class="t-last">1&nbsp;</td></tr></tbody><tfoot><tr><td class="t-pager-wrapper" colspan="3"><div class="t-status"><a class="t-icon t-refresh" href="/Training/Details/CUAPHI403" onclick=" $(&#39;#tableSkillSets a:first&#39;).focus();" title="Refresh table content"><span class="accessibilityOnly">Refresh information in &#39;Table listing Skill sets that include this unit&#39;</span></a></div><div class="t-pager t-reset"><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableSkillSets a:first&#39;).focus();" tabindex="-1" title="First Page"><span class="t-icon t-arrow-first">Navigate to first page in table listing Skill sets that include this unit.</span></a><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableSkillSets a:first&#39;).focus();" tabindex="-1" title="Previous page"><span class="t-icon t-arrow-prev">Navigate to previous page in table listing Skill sets that include this unit.</span></a><div class="t-numeric"><span class="t-state-active" onclick=" $(&#39;#tableSkillSets a:first&#39;).focus();"><span class="accessibilityOnly">Navigate to page </span>1<span class="accessibilityOnly"> in table listing Skill sets that include this unit</span></span></div><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableSkillSets a:first&#39;).focus();" tabindex="-1" title="Next page"><span class="t-icon t-arrow-next">Navigate to the next page in table listing Skill sets that include this unit.</span></a><a class="t-link t-state-disabled" href="#" onclick=" $(&#39;#tableSkillSets a:first&#39;).focus();" tabindex="-1" title="Last Page"><span class="t-icon t-arrow-last">Navigate to the last page in table listing Skill sets that include this unit.</span></a></div><div class="t-pagesize-wrapper">Items per page <span class="t-pagesize-wrapper-selected">10</span> | <span class="">20</span> | <span class="">50</span> | <span class="">100</span></div><div class="t-status-text">Displaying items 1 - 2 of 2</div></td></tr></tfoot></table></div></div></div>  
+    <div class="outer">
+        <h2 class="legend">Classifications</h2>           
+        <div class="historyCheckbox" style="display:none;height:15px;margin-right:20px;">
+            <input type="checkbox" name="displayHistory" id="displayHistory" value="true" checked="checked" title="Display history (below each table)" />
+            <a href="#" id="displayHistoryLabel" style="cursor: pointer;">Display history</a>
+      
+        </div>  
+        <div class="clear"></div>
+        <div class="fieldset">
+            
+            <div class="t-widget t-grid" id="tableClassifications"><table cellspacing="0" summary="Table listing all current Classifications" title="Table listing all current Classifications"><colgroup><col /><col style="width:100px" /><col /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Scheme</th><th class="t-header" scope="col">Code</th><th class="t-last-header t-header" scope="col">Classification value</th></tr></thead><tbody><tr><td>ASCED Module/Unit of Competency Field of Education Identifier&nbsp;</td><td>100303&nbsp;</td><td class="t-last">Photography&nbsp;</td></tr></tbody></table></div>    
+            <div class="history" id="unitclassificationHistoryField">
+                <h3>Classification history</h3>
+                <div class="t-widget t-grid" id="tableClassificationsHistory"><table cellspacing="0" summary="Table listing complete Classifications history" title="Table listing complete Classifications history"><colgroup><col /><col style="width:100px" /><col /><col style="width:80px" /><col style="width:80px" /></colgroup><thead class="t-grid-header"><tr><th class="t-header" scope="col">Scheme</th><th class="t-header" scope="col">Code</th><th class="t-header" scope="col">Classification value</th><th class="t-header" scope="col">Start date</th><th class="t-last-header t-header" scope="col">End date</th></tr></thead><tbody><tr><td>ASCED Module/Unit of Competency Field of Education Identifier&nbsp;</td><td>100303&nbsp;</td><td>Photography&nbsp;</td><td>24/Jun/2016</td><td class="t-last">&nbsp;</td></tr></tbody></table></div>
+            </div>          
+        </div>
+    </div>   
+        
+
+<div class="accessibilityOnly">The content being displayed has been produced by a third party, while all attempts have been made to make this content as accessible as possible it cannot be guaranteed.  If you are encountering issues following the content on this page please consider downloading the content in its original form</div>
+
+
+<div class="outer">
+    <h2 class="legend">Content</h2>
+    <div class="fieldset">
+            
+    <div class="display-row"><div class="display-label">Compare:</div><div class="display-field-info">
+                 <a href="/Comparison/ComparisonWizard?nrtId=dbbf00b5-1897-4423-b113-687be1ce71f5" id="compareText" title="Starts comparison wizard">Compare content of this unit of competency with other releases or training components</a> 
+                       </div></div>
+                       
+                       
+
+        <div class="display-row">
+        
+        
+            <div class="display-label">Download:</div>
+            <div class="display-field-info">
+                                             <ul class="contentLinksShort" >
+                                                 
+                                               
+                                                 <li><a href="/TrainingComponentFiles/CUA/CUAPHI403_R1.docm"
+                                                target="_blank" rel="noopener"
+                                                class="linkWord"
+                                                title="Download Unit Of competency in Word format."><span class="accessibilityOnly">Download Unit Of competency in Word format.</span>Unit Of competency (1.26 MB)</a>
+                                             </li>
+                                               
+                                                 <li><a href="/TrainingComponentFiles/CUA/CUAPHI403_R1.pdf"
+                                                target="_blank" rel="noopener"
+                                                class="linkPdf"
+                                                title="Download Unit Of competency in PDF format."><span class="accessibilityOnly">Download Unit Of competency in PDF format.</span>Unit Of competency (201.93 KB)</a>
+                                             </li></ul>
+                                             <ul class="contentLinksShort" >
+                                                 
+                                               
+                                                 <li><a href="/TrainingComponentFiles/CUA/CUAPHI403_AssessmentRequirements_R1.docm"
+                                                target="_blank" rel="noopener"
+                                                class="linkWord"
+                                                title="Download Assessment requirements in Word format."><span class="accessibilityOnly">Download Assessment requirements in Word format.</span>Assessment requirements (1.26 MB)</a>
+                                             </li>
+                                               
+                                                 <li><a href="/TrainingComponentFiles/CUA/CUAPHI403_AssessmentRequirements_R1.pdf"
+                                                target="_blank" rel="noopener"
+                                                class="linkPdf"
+                                                title="Download Assessment requirements in PDF format."><span class="accessibilityOnly">Download Assessment requirements in PDF format.</span>Assessment requirements (185.53 KB)</a>
+                                             </li></ul>
+               
+               </div></div>
+               
+    </div>
+    
+    </div>
+    
+    <div class="content"><h1>Unit Of competency</h1><?xml-stylesheet type="text/xsl" href="AuthorIT.xslt"><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:tga="urn:my-scripts">
+  <body>
+    <h2>Modification History</h2>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="346">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Release</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="645">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Comments</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="346">
+          <P class="&#xA;                ait4">Release 1</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="645">
+          <P class="&#xA;                ait4">This version first released with CUA Creative Arts and Culture Training Package version 2.0.</P>
+        </TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Application</h2>
+    <P class="&#xA;                ait4">This unit describes the skills and knowledge required to enhance photo images ready for output. This process could be digital or using a wet darkroom.</P>
+    <P class="&#xA;                ait4"></P>
+    <P class="&#xA;                ait4">It applies to individuals who use techniques to enhance and resolve the concept for the image. They may work in photo centres, specialised photo processing laboratories or photography studios.</P>
+    <P class="&#xA;                ait4"></P>
+    <P class="&#xA;                ait4">No licensing, legislative or certification conditions apply to this unit at the time of publication.</P>
+    <h2>Unit Sector</h2>
+    <P class="&#xA;                ait4">Visual communication – photo imaging</P>
+    <h2>Elements and Performance Criteria</h2>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid ;;vertical-align: top;" width="296">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">ELEMENT</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid ;;vertical-align: top;" width="743">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">PERFORMANCE CRITERIA</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid ;;vertical-align: top;" width="296">
+          <P class="&#xA;                ait4"><EM class="&#xA;                ait7">Elements describe the essential outcomes.</EM></P>
+        </TD>
+        <TD style="border:1px solid ;;vertical-align: top;" width="743">
+          <P class="&#xA;                ait4"><EM class="&#xA;                ait7">Performance criteria describe the performance needed to demonstrate achievement of the element.</EM></P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="296">
+          <P class="&#xA;                ait4">1. Plan image output</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="743">
+          <P class="&#xA;                ait4">1.1 Clarify and confirm concept for final images in consultation with relevant personnel</P>
+          <P class="&#xA;                ait4">1.2 Identify and select work prints or files and check that they are consistent with concept or brief</P>
+          <P class="&#xA;                ait4">1.3 Assess qualities and characteristics of work prints or files suitable for enhancement and manipulation</P>
+          <P class="&#xA;                ait4">1.4 Confirm output strategies, and materials and equipment needed to produce required image</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="296">
+          <P class="&#xA;                ait4">2. Prepare for analog or digital work</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="743">
+          <P class="&#xA;                ait4">2.1 Select darkroom or digital work environment to meet project requirements</P>
+          <P class="&#xA;                ait4">2.2 Maintain clean and safe work environment during production of work</P>
+          <P class="&#xA;                ait4">2.3 Set up relevant equipment safely and prepare materials for work</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="296">
+          <P class="&#xA;                ait4">3. Enhance and manipulate images</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="743">
+          <P class="&#xA;                ait4">3.1 Select techniques for image enhancement and manipulation consistent with concept, testing processes and purpose of work to produce optimal quality images</P>
+          <P class="&#xA;                ait4">3.2 Identify screen-based issues for consideration where appropriate</P>
+          <P class="&#xA;                ait4">3.3 Apply selected techniques to images</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="296">
+          <P class="&#xA;                ait4">4. Output images</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="743">
+          <P class="&#xA;                ait4">4.1 Select appropriate materials and equipment for output option</P>
+          <P class="&#xA;                ait4">4.2 Produce output image by digital or analog means, and confirm that image meets project requirements with relevant personnel</P>
+          <P class="&#xA;                ait4">4.3 Confirm that privacy, intellectual property and other relevant legal requirements are met</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="296">
+          <P class="&#xA;                ait4">5. Complete post-shoot activities </P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="743">
+          <P class="&#xA;                ait4">5.1 Restore work area to original condition, disposing of waste safely</P>
+          <P class="&#xA;                ait4">5.2 Clean and care for equipment according to manufacturer instructions</P>
+          <P class="&#xA;                ait4">5.3 Store equipment according to workplace procedures</P>
+        </TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Foundation Skills</h2>
+    <P class="&#xA;                ait4"><EM class="&#xA;                ait7">This section describes language, literacy, numeracy and employment skills incorporated in the performance criteria that are required for competent performance.</EM></P>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="185">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Skill</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Performance</STRONG>&nbsp;</P>
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Criteria</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="637">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Description</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="185">
+          <P class="&#xA;                ait4">Reading</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4">5.2, 5.3</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="637"><ul class='ait13'><li>Interprets straightforward instructions and procedures, including safety information, for application in the workplace</li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="185">
+          <P class="&#xA;                ait4">Writing</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4">1.1, 1.4</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="637"><ul class='ait13'><li>Uses clear, uncomplicated language and industry-related terminology to request and clarify information from colleagues</li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="185">
+          <P class="&#xA;                ait4">Oral Communication</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4">1.1, 1.4, 4.2</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="637"><ul class='ait13'><li>Articulates clearly using relevant language suitable to the context to gather information and confirm requirements</li>
+          <li>Uses listening and questioning techniques to confirm understanding</li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="185">
+          <P class="&#xA;                ait4">Navigate the world of work</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4">2.2, 2.3, 4.3, 5.1, 5.3</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="637"><ul class='ait13'><li>Meets workplace expectations for safe preparation and completion of photo image work</li>
+          <li>Observes privacy and intellectual property responsibilities and other legal requirements related to image production work</li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="185">
+          <P class="&#xA;                ait4">Interact with others </P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4">1.1, 1.4, 4.2</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="637"><ul class='ait13'><li>Selects and uses accepted communication practices and procedures to discuss project requirements and confirm work outcomes with others</li></ul></TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="185">
+          <P class="&#xA;                ait4">Get the work done</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4">1.2-1.4, 2.1-2.3, 3.1-3.3, 4.1, 4.2, 4.4, 5.1, 5.2 </P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="637"><ul class='ait13'><li>Plans and organises workload methodically for efficient and effective completion of tasks</li>
+          <li>Makes decisions directly related to completion of tasks, with input from others</li>
+          <li>Follows procedures related to work area and equipment</li></ul></TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Unit Mapping Information</h2>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="258">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Code and title </STRONG>&nbsp;</P>
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">current version</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Code and title</STRONG>&nbsp;</P>
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">previous version</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="252">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Comments</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="252">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Equivalence status</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="258">
+          <P class="&#xA;                ait4">CUAPHI403 Enhance, manipulate and output photo images</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="237">
+          <P class="&#xA;                ait4">CUVPHI404A Enhance, manipulate and output photo images</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="252">
+          <P class="&#xA;                ait4">Updated to meet Standards for Training Packages.</P>
+          <P class="&#xA;                ait4">Minor edits to elements and performance criteria. </P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="252">
+          <P class="&#xA;                ait4">Equivalent unit</P>
+        </TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Links</h2>
+    <P class="&#xA;                ait4">Companion Volume implementation guides are found in VETNet - <a href='https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5' target='_blank'>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5</a></P>
+  </body>
+</html></div>
+                 <div>&nbsp;</div>
+                 <hr/><div class="content"><h1>Assessment requirements</h1><?xml-stylesheet type="text/xsl" href="AuthorIT.xslt"><html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:tga="urn:my-scripts">
+  <body>
+    <h2>Modification History</h2>
+    <TABLE class="ait-table" width="943">
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="295">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Release</STRONG>&nbsp;</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="696">
+          <P class="&#xA;                ait4"><STRONG class="&#xA;                ait24">Comments</STRONG>&nbsp;</P>
+        </TD>
+      </TR>
+      <TR>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="295">
+          <P class="&#xA;                ait4">Release 1</P>
+        </TD>
+        <TD style="border:1px solid #333333;;vertical-align: top;" width="696">
+          <P class="&#xA;                ait4">This version first released with CUA Creative Arts and Culture Training Package version 2.0.</P>
+        </TD>
+      </TR>
+    </TABLE>
+    <P class="&#xA;                ait4"></P>
+    <h2>Performance Evidence</h2>
+    <P class="&#xA;                ait4">Evidence of the ability to:</P><ul class='ait13'><li>plans, selects and uses processes and outputting options to suit the job requirements and in accordance with workplace procedures. </li>
+    <li>produce a body of images that demonstrates command of enhancement and manipulation techniques</li>
+    <li>clean work areas and check and store equipment according to workplace requirements.</li></ul><P class="&#xA;                ait4"></P>
+    <P class="&#xA;                ait4">Note: If a specific volume or frequency is not stated, then evidence must be provided at least once.</P>
+    <h2>Knowledge Evidence</h2>
+    <P class="&#xA;                ait4">To complete the unit requirements safely and effectively, the individual must:</P><ul class='ait13'><li>outline the features of prints or files that can be enhanced or manipulated</li>
+    <li>describe common techniques for enhancing and manipulating images </li>
+    <li>describe a range of output equipment and materials that can be used in analog, digital or other print technologies </li>
+    <li>outline a range of output options</li>
+    <li>summarise work health and safety procedures for using darkroom equipment and materials and/ or using screens and keyboards for extended periods of time</li>
+    <li>outline intellectual property and other legislation relevant to image enhancement, manipulation and output.</li></ul><h2>Assessment Conditions</h2>
+    <P class="&#xA;                ait4">Assessment must be conducted in a safe environment where evidence gathered demonstrates consistent performance of typical activities experienced in creative arts industry environments. The assessment environment must include access to: </P><ul class='ait13'><li>photo imaging materials, tools and equipment.</li></ul><P class="&#xA;                ait4"></P>
+    <P class="&#xA;                ait4">Assessors of this unit must satisfy the requirements for assessors in applicable vocational educational and training legislation, frameworks and/or standards.</P>
+    <h2>Links</h2>
+    <P class="&#xA;                ait4">Companion Volume implementation guides are found in VETNet - <a href='https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5' target='_blank'>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5</a></P>
+  </body>
+</html></div>
+
+        
+        
+        
+
+        <div class="backtotop">
+            <a href="#navigation" title="Scroll back to the top of this page.">Back to top</a>
+        </div>
+    </div>            
+
+    
+</div>
+
+
+    </div>
+
+    <script src="/bundles/javascript?v=0bvaoz-aqoEV7vRFj8ENmjlWun-BabCNm9njAhHyJRk1"></script>
+
+    <script type="text/javascript">
+        <!--
+        	var showAlertBoxes = true;
+        	var staticAssistant = false;
+        	var twoCol = false;
+
+            $(document).ready(function() {
+
+                shortcut.add("s", function() {
+                    window.location = "/Search";
+                    return false;
+	            },{
+	                'type':'keydown',
+                    'propagate':false,
+                    'disable_in_input':true,
+                    'target':document
+	            });
+
+                shortcut.add("h", function() {
+                    window.location = "/";
+                    return false;
+	            },{
+	                'type':'keydown',
+                    'propagate':false,
+                    'disable_in_input':true,
+                    'target':document
+	            });
+	            
+                $("body").bind("mousemove", function() {
+	                $("body").unbind("mousemove");
+	                showAlertBoxes = false;
+	            });	            
+
+                $('input').filter('$[value*=Submit]')
+                    .add($('input').filter('$[value*=submit]'))
+                    .add($('input').filter('$[value*=Add]'))
+                    .bind("click", function (e) {
+                    $("#fakelinktoerrormsg").focus();
+                    });
+
+
+                $('.SearchBoxLarge input[type=text]').keyup(
+                    function () {
+                        if ($(this).val() === "") {
+                            $(".SearchBoxLarge .deleteicon").removeClass('deleteiconshow');
+                        } else {
+                            $(".SearchBoxLarge .deleteicon").addClass('deleteiconshow');
+                        }
+                    }
+                );
+
+                if ($('.SearchBoxLarge input[type=text]:eq(1)').val() === "") {
+                    $(".SearchBoxLarge .deleteicon").removeClass('deleteiconshow');
+                } else {
+                        
+                    $(".SearchBoxLarge .deleteicon").addClass('deleteiconshow');
+                    }
+
+                $('input[id^="TgaSearch"]').autocomplete({
+                
+                    source: function (request, response) {
+                        var searchType = $("#searchType").val();
+
+                        if (searchType == null) {
+                            searchType = $("input[name='SearchType']:checked").val();
+                        }
+
+                        selecttext="";
+                        var url = '/Search/AjaxAutocompleteSearch?SearchType=' + searchType;
+                        $.ajax({
+                            type: "POST",
+                            url: url,
+                            dataType: "json",
+                            data: {
+                                searchType:searchType,
+                                text:$(this).get(0).term
+                            },
+                            success: function (data) {
+                                var array = data.error ? [] : $.map(data, function(m) {
+                                    return {
+                                        label: m.Text,
+                                        value: m.Value
+                                    };
+                                });
+                                response( array );
+                            }
+                        });
+                    },
+                    minLength: 3,
+                    select: function (event, ui) {
+                        var redirectUrl = "";
+                        selecttext = ui.item.label.split('-')[0];
+                        if ($("input[name='SearchType']:checked").val() == "Rto") {
+                            redirectUrl = '/Organisation/Details/' + ui.item.value;
+                        } else {
+                            redirectUrl = '/Training/Details/' + ui.item.value;
+                        }
+
+                        window.location.href = redirectUrl;
+                        
+                    },
+                    close: function (event, ui) {
+                        if (selecttext !=='') {
+                           
+                            $('input[id^="TgaSearch"]').val(selecttext);
+                        } 
+                    }
+                });
+               
+            });
+
+            //toggles the CSS, form and search field depending on what the user has selected
+            function ToggleSearchOption(option) {
+
+                if (option.value == "Nrt") {
+                    $("#toggler").attr("class", "toggleNrt");
+                    $("#togglerSearchBar").attr("class", "toggleNrt");
+                    $("#TgaSearchBarForm .SearchOptions #NrtSearchBar").attr('checked', 'checked');
+                    $("#TgaSearchForm .SearchOptions #Nrt").attr('checked', 'checked');
+                    $("#TgaSearchBarForm .SearchOptions #RtoSearchBar").attr('checked', false);
+                    $("#TgaSearchForm .SearchOptions #Rto").attr('checked', false);
+                    setCookieForHistory("TgaSearchOption", "Nrt", 365);
+
+                } else if (option.value == "Rto") {
+                    $("#toggler").attr("class", "toggleRto");
+                    $("#togglerSearchBar").attr("class", "toggleRto");
+                    $("#TgaSearchBarForm .SearchOptions #RtoSearchBar").attr('checked', 'checked');
+                    $("#TgaSearchForm .SearchOptions #Rto").attr('checked', 'checked');
+                    $("#TgaSearchBarForm .SearchOptions #NrtSearchBar").attr('checked', false);
+                    $("#TgaSearchForm .SearchOptions #Nrt").attr('checked', false);
+                    setCookieForHistory("TgaSearchOption", "Rto", 365);
+                }
+            }
+
+            //loads the last option the user selected when reloading for the CSS, form and search field depending on what the user has selected
+            $(document).ready(function () {
+                var searchSelected = getCookie("TgaSearchOption");
+
+                if (searchSelected === undefined || searchSelected == null || searchSelected.length <= 0) {
+                    searchSelected = "Nrt";
+                }
+
+                if (searchSelected == "Nrt") {
+                    $("#toggler").attr("class", "toggleNrt");
+                    $("#togglerSearchBar").attr("class", "toggleNrt");
+                    $("#TgaSearchBarForm .SearchOptions #NrtSearchBar").attr('checked', 'checked');
+                    $("#TgaSearchForm .SearchOptions #Nrt").attr('checked', 'checked');
+                    $("#TgaSearchBarForm .SearchOptions #RtoSearchBar").attr('checked', false);
+                    $("#TgaSearchForm .SearchOptions #Rto").attr('checked', false);
+                } else if (searchSelected == "Rto") {
+                    $("#toggler").attr("class", "toggleRto");
+                    $("#togglerSearchBar").attr("class", "toggleRto");
+                    $("#TgaSearchBarForm .SearchOptions #RtoSearchBar").attr('checked', 'checked');
+                    $("#TgaSearchForm .SearchOptions #Rto").attr('checked', 'checked');
+                    $("#TgaSearchBarForm .SearchOptions #NrtSearchBar").attr('checked', false);
+                    $("#TgaSearchForm .SearchOptions #Nrt").attr('checked', false);
+
+                }
+            });
+        //-->
+    </script>
+<script type="text/javascript">
+    <!--    
+    $(document).ready(function () {
+        if (getParameterByName("setFocus") != null) {
+            $("#" + getParameterByName("setFocus") + " a:first").focus();
+        }
+    });
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    //-->
+</script>
+        
+
+<link href="/Content/Styles/css?v=dD6LgwDLSgmoWMaB7XaWSmFJnKXUeH3CZ5_n1JFFCBk1" rel="stylesheet"/>
+<link type="text/css" href="/asset.axd?id=vQAAAB-LCAAAAAAABACrVkpRsoquVipQslJyzs8rSc0r0TcyMDTQM9YzNDQ0UNJRSgPL5wHlS1JzUosys_WS83Nz8_P0cjPz9JKLi4FK8pWsDGpja3VQjQkuqcxJLcZqQkl6IkKrIVBrrI5ScglYQUWJPkSmDMhFdUky0KnGZqZAhpJVSVFpai0ADM2Fk70AAAA%3d" rel="stylesheet"/>
+
+    <div id="layoutFooter">
+        <div id="footer">
+            <div id="logo">
+                <img src="/Content/images/stones-32x32-transparent.png" alt="TGA Logo stepping stones" />
+            </div>
+            <div id="version">
+                
+                [Site version 3.20.1.12]
+            </div>
+            <div id="siteLinks">
+                <ul>
+                    <li><a href="/Home/TermsOfUse">Terms of use</a></li>
+                    <li><a href="/Home/PrivacyPolicy">Privacy policy</a></li>
+                    <li><a href="/Home/Copyright">Copyright</a></li>
+                    <li><a href="/Home/SiteMap">Site Map</a></li>
+            </ul>
+            </div>                
+        </div>
+    </div>
+    </div><!--End of Page div-->
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.common.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.calendar.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.datepicker.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.editing.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.filtering.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.autocomplete.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.combobox.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.grid.grouping.min.js"></script>
+<script type="text/javascript" src="/Scripts/2010.3.1110/telerik.list.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function(){
+if (!jQuery.telerik) jQuery.telerik = {};
+jQuery.telerik.cultureInfo={"shortDate":"dd/MMM/yyyy","longDate":"dddd, d MMMM yyyy","longTime":"h:mm:ss tt","shortTime":"h:mm tt","fullDateTime":"dddd, d MMMM yyyy h:mm:ss tt","sortableDateTime":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","universalSortableDateTime":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","generalDateShortTime":"dd/MMM/yyyy h:mm tt","generalDateTime":"dd/MMM/yyyy h:mm:ss tt","monthDay":"d MMMM","monthYear":"MMMM yyyy","days":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"abbrDays":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"abbrMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"months":["January","February","March","April","May","June","July","August","September","October","November","December",""],"am":"AM","pm":"PM","dateSeparator":"/","timeSeparator":":","currencydecimaldigits":2,"currencydecimalseparator":".","currencygroupseparator":",","currencygroupsize":3,"currencynegative":1,"currencypositive":0,"currencysymbol":"$","numericdecimaldigits":2,"numericdecimalseparator":".","numericgroupseparator":",","numericgroupsize":3,"numericnegative":1,"percentdecimaldigits":2,"percentdecimalseparator":".","percentgroupseparator":",","percentgroupsize":3,"percentnegative":1,"percentpositive":1,"percentsymbol":"%"};
+jQuery('#tableMappings').tGrid({columns:[{},{"title":"Notes","member":"Notes","type":"String"},{"title":"Date","member":"MappingDate","type":"Date","format":"{0:d}"}], urlFormat:'/Training/Details/CUAPHI403', pageSize:0});
+jQuery('#tableReleaseHistory').tGrid({columns:[{},{}], urlFormat:'/Training/Details/CUAPHI403', pageSize:0});
+jQuery('#tableUnitContextualisations').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for unit contextualisation \u003c#= Title #\u003e\"\u003eDetails\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e"},{"template":"\u003c#= Title #\u003e","title":"Title","member":"Title","type":"String"}], pageSize:0, ajax:{"selectUrl":"/Training/AjaxGetUnitUnitContextualisations/CUAPHI403?releaseId=bf5b2a06-2973-4514-ad2e-7b9e8423ff6c"}});
+jQuery('#tableTrainingPackges').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for training package code \u003c#= Code #\u003e\"\u003e\u003c#= Code #\u003e\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e","title":"Code","member":"Code","type":"String"},{"title":"Title","member":"Title","type":"String"},{"title":"Release","member":"Releases","type":"String"}], pageSize:0, sortMode:'single', ajax:{"selectUrl":"/Training/AjaxGetReleaseTrainingPackages/CUAPHI403?releaseId=bf5b2a06-2973-4514-ad2e-7b9e8423ff6c"}});
+jQuery('#tableQualifications').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for qualification code \u003c#= Code #\u003e\"\u003e\u003c#= Code #\u003e\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e","title":"Code","member":"Code","type":"String"},{"template":"\u003c#= Title#\u003e   \u003c# if (IsConfidential) {#\u003e\u003cimg src=\"/Content/images/Confidential_Icon.png\" class=\"ConfidentialFlagIcon\"  alt=\"Confidential Qualification\" onmouseout=\"$(this).next().css(\u0027display\u0027, \u0027none\u0027);\" onmouseover=\"$(this).next().css(\u0027display\u0027, \u0027inline\u0027);\" /\u003e\u003cspan class=\"tooltiptext\" style=\u0027display:none;\u0027\u003eConfidential Qualification\u003c/span\u003e \u003c#}#\u003e","title":"Title","member":"Title","type":"String"},{"title":"Release","member":"Releases","type":"String"}], total:8, currentPage:1, sortMode:'single', ajax:{"selectUrl":"/Training/AjaxGetUnitQualifications/CUAPHI403"}});
+jQuery('#tableSkillSets').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for skill set \u003c#= Title #\u003e\"\u003e\u003c#= Code#\u003e\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e","title":"Code","member":"Code","type":"String"},{"template":"\u003c#= Title#\u003e   \u003c# if (IsConfidential) {#\u003e\u003cimg src=\"/Content/images/Confidential_Icon.png\" class=\"ConfidentialFlagIcon\"  alt=\"Confidential Skill Set\" onmouseout=\"$(this).next().css(\u0027display\u0027, \u0027none\u0027);\" onmouseover=\"$(this).next().css(\u0027display\u0027, \u0027inline\u0027);\" /\u003e\u003cspan class=\"tooltiptext\" style=\u0027display:none;\u0027\u003eConfidential Skill Set\u003c/span\u003e \u003c#}#\u003e","title":"Title","member":"Title","type":"String"},{"title":"Release","member":"Releases","type":"String"}], total:2, currentPage:1, sortMode:'single', ajax:{"selectUrl":"/Training/AjaxGetUnitSkillSets/CUAPHI403"}});
+jQuery('#tableTrainingPackges').tGrid({columns:[{"template":"\u003ca href=\"/Training/Details/%3C%23%3d%20Code%20%23%3E\" title=\"View details for training package code \u003c#= Code #\u003e\"\u003e\u003c#= Code #\u003e\u003cspan class=\"accessibilityOnly\"\u003e - \u003c#= Title #\u003e\u003c/span\u003e\u003c/a\u003e","title":"Code","member":"Code","type":"String"},{"title":"Title","member":"Title","type":"String"}], pageSize:0, sortMode:'single', ajax:{"selectUrl":"/Training/AjaxGetUnitAccreditedCourses/CUAPHI403?releaseId=bf5b2a06-2973-4514-ad2e-7b9e8423ff6c"}});
+jQuery('#tableClassifications').tGrid({columns:[{"title":"Scheme","member":"Value.Scheme.Description","type":"String"},{"title":"Code","member":"Value.Value","type":"String"},{"title":"Classification value","member":"Value.Name","type":"String"}], urlFormat:'/Training/Details/CUAPHI403', pageSize:0});
+jQuery('#tableClassificationsHistory').tGrid({columns:[{"title":"Scheme","member":"Value.Scheme.Description","type":"String"},{"title":"Code","member":"Value.Value","type":"String"},{"title":"Classification value","member":"Value.Name","type":"String"},{"title":"Start date","member":"StartDate","type":"Date","format":"{0:d}"},{"title":"End date","member":"EndDate","type":"Date","format":"{0:d}"}], urlFormat:'/Training/Details/CUAPHI403', pageSize:0});});
+//]]>
+</script>
+</body>
+</html>

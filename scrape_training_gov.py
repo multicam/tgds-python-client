@@ -53,7 +53,22 @@ def parse_one(page_content):
     print('--- AAA ---')
     # Assessment Requirements
     parse_items = root.select('.content')[1].select
-    print(parse_items)
+    temp = {'slug': '', 'label': '', 'children': []}
+
+    if parse_items:
+        # for j in parse_items:
+        #     # print('--', j.name)
+        #     if j.name == 'h2':
+        #         show_item(item)
+        #         item = {
+        #             'slug': i.text.strip().replace(' ', '_').lower(),
+        #             'label': i.text.strip(),
+        #             'children': []
+        #         }
+        #     else:
+        #         item['children'].append(i)
+        print('-- AAA parsed --')
+
 
 def scrape_one(unit):
     file = open(unit_file_name(unit), 'r')
@@ -80,7 +95,7 @@ def scrape_cuv_40720():
     for i in units:
         # save_one(i)
         scrape_one(i)
-        break
+        # break
 
     print('done.')
 

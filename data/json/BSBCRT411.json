@@ -1,0 +1,94 @@
+[
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with BSB Business Services Training Package Version 7.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "application",
+        "label": "Application",
+        "children": [
+            "<p>This unit describes the skills and knowledge required to use advanced-level critical thinking skills in a workplace context. This includes using methods of analysis, synthesis and evaluation.</p>",
+            "<p>The unit applies to individuals who evaluate existing or proposed work practices. These individuals are typically responsible for reviewing or developing work processes, products or services that may be proposed or already existing. </p>",
+            "<p>No licensing, legislative or certification requirements apply to this unit at the time of publication.</p>"
+        ]
+    },
+    {
+        "slug": "unit_sector",
+        "label": "Unit Sector",
+        "children": [
+            "<p>Critical Thinking &amp; Problem Solving – Critical Thinking</p>"
+        ]
+    },
+    {
+        "slug": "elements_and_performance_criteria",
+        "label": "Elements and Performance Criteria",
+        "children": [
+            "<table><tr><td><p><strong>ELEMENT</strong></p></td><td><p><strong>PERFORMANCE CRITERIA</strong></p></td></tr><tr><td><p><em>Elements describe the essential outcomes.</em></p></td><td><p><em>Performance criteria describe the performance needed to demonstrate achievement of the element.</em></p></td></tr><tr><td><p>1. Establish role of critical thinking in workplace </p></td><td><p>1.1 Identify key characteristics of critical thinking processes</p><p>1.2 Evaluate situations in which critical thinking concepts are applied in work practices </p><p>1.3 Articulate benefits of applying critical thinking practices in the workplace </p></td></tr><tr><td><p>2. Lead critical thinking process</p></td><td><p>2.1 Analyse existing and proposed work practices and identify limitations </p><p>2.2 Locate information<code></code>on selected work practices for the development of solutions </p><p>2.3 Determine solutions for workplace limitations using critical thinking concepts</p><p>2.4 Develop a proposal for solutions using a decision-making framework according to organisational policies and procedures</p><p>2.5 Present ideas for solutions and justify decision making process to relevant stakeholders</p></td></tr><tr><td><p>3. Develop critical thinking mindset</p></td><td><p>3.1 Review decision making practices in the work area</p><p>3.2 Seek feedback from relevant stakeholders on use of critical thinking from relevant stakeholders</p><p>3.3 Identify areas for self-development in relation to own job role </p><p>3.4 Develop plan for future process evaluations and incorporate improvements identified</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "foundation_skills",
+        "label": "Foundation Skills",
+        "children": [
+            "<p><em>This section describes those language, literacy, numeracy and employment skills that are essential to performance but not explicit in the performance criteria.</em></p>",
+            "<table><tr><td><p><strong>Skill</strong></p></td><td><p><strong>Description</strong></p></td></tr><tr><td><p>Learning</p></td><td><ul><li>Reflects on own performance and seeks opportunities to improve own skills and knowledge</li><li>Identifies the key themes and ideas to be explored and ways to response to and use diverse perspectives</li></ul></td></tr><tr><td><p>Numeracy</p></td><td><ul><li>Interprets and critically analyses numerical data to determine work process requirements</li></ul></td></tr><tr><td><p>Oral communication</p></td><td><ul><li>Articulates ideas and requirements clearly and persuasively using techniques appropriate to audience and environment</li><li>Participates in a verbal exchange of ideas and elicits the view and opinions of others by listening and questioning</li></ul></td></tr><tr><td><p>Reading</p></td><td><ul><li>Interprets, evaluates and extracts relevant information from a range of texts for work requirements</li></ul></td></tr><tr><td><p>Writing</p></td><td><ul><li>Develops clear workplace documents appropriate to audience and context</li><li>Selects appropriate channel, format, tone and content to suit purpose and audience</li></ul></td></tr><tr><td><p>Teamwork </p></td><td><ul><li>Seeks to establish interpersonal connections to facilitate work with a diverse range of people</li></ul></td></tr><tr><td><p>Initiative and enterprise</p></td><td><ul><li>Identifies the implications of legal and regulatory responsibilities on own work </li><li>Adheres to implicit and explicit organisational procedures and policies, seeking advice from others if necessary</li></ul></td></tr><tr><td><p>Planning and organising</p></td><td><ul><li>Uses systematic processes to gather and analyse information required to make decisions</li></ul></td></tr><tr><td><p>Problem-solving</p></td><td><ul><li>Uses problem-solving skills to evaluate and challenge ideas and move towards solutions</li></ul></td></tr><tr><td><p>Technology </p></td><td><ul><li>Uses features and functions of digital tools and technologies to store and present information</li></ul></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "unit_mapping_information",
+        "label": "Unit Mapping Information",
+        "children": [
+            "<p>Supersedes and is equivalent to BSBCRT404 Apply advanced critical thinking to work processes.</p>"
+        ]
+    },
+    {
+        "slug": "links",
+        "label": "Links",
+        "children": [
+            "<p>Companion Volume Implementation Guide is found on VETNet - <a>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=11ef6853-ceed-4ba7-9d87-4da407e23c10</a></p>"
+        ]
+    },
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with BSB Business Services Training Package Version 7.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "performance_evidence",
+        "label": "Performance Evidence",
+        "children": [
+            "<p>The candidate must demonstrate the ability to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including evidence of the ability to:</p>",
+            "<ul><li>develop solutions for two different workplace limitations using critical thinking concepts. </li></ul>",
+            "<p>In the course of the above the candidate must: </p>",
+            "<ul><li>use a range of critical thinking techniques to identify and address limitations in workplace practices</li><li>ask questions to broaden understanding of task requirements</li><li>use various information sources to provide answers to proposed questions</li><li>develop a proposal to articulate to a broad range of workplace stakeholders a solution to an identified issue</li><li>incorporate feedback and self-reflection to critically assess performance.</li></ul>"
+        ]
+    },
+    {
+        "slug": "knowledge_evidence",
+        "label": "Knowledge Evidence",
+        "children": [
+            "<p>The candidate must be able to demonstrate knowledge to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including knowledge of:</p>",
+            "<ul><li>critical thinking concepts and the value of applying such approaches in a work environment</li><li>key characteristics of critical thinking processes </li><li>sources of reliable information relevant to workplace practices </li><li>key components of decision- making frameworks </li><li>features and limitations of workplace practices</li><li>legislative requirements relating to workplace practices</li><li>components of self-evaluation and development.</li></ul>"
+        ]
+    },
+    {
+        "slug": "assessment_conditions",
+        "label": "Assessment Conditions",
+        "children": [
+            "<p>Skills in this unit must be demonstrated in a workplace or simulated environment where the conditions are typical of those in a working environment in this industry.</p>",
+            "<p>This includes access to:</p>",
+            "<ul><li>technology, software and resources required to implement and maintain internal control procedures</li><li>corporate governance documentation required for role</li><li>organisational operational policies and procedures required for role.</li></ul>",
+            "<p></p>",
+            "<p>Assessors of this unit must satisfy the assessor requirements in applicable vocational education and training legislation, frameworks and/or standards.</p>"
+        ]
+    }
+]

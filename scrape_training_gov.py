@@ -1,25 +1,57 @@
 import sys
 from datetime import datetime
 import requests
+import json
 from bs4 import BeautifulSoup
-
-RED = "\033[1;31m"
-BLUE = "\033[1;34m"
-CYAN = "\033[1;36m"
-GREEN = "\033[0;32m"
-RESET = "\033[0;0m"
-BOLD = "\033[;1m"
-REVERSE = "\033[;7m"
 
 
 def unit_file_name(unit):
     return 'data/units/'+unit+'.html'
 
 
+def unit_json_name(unit):
+    return 'data/json/'+unit+'.json'
+
+
 def show_item(item):
     print('//', item['label'], item['slug'])
     for i in item['children']:
-        print('--', i.name)
+        print('/-', i)
+
+
+def parse_items_fn(items):
+    item = {'slug': '', 'label': '', 'children': []}
+    bootstrapped = False
+    res = []
+
+
+    for i in items:
+        # print('--', i.name)
+        if i.name == 'h2':
+            if bootstrapped:
+                res.append(item)
+            else:
+                bootstrapped = True
+
+            show_item(item)
+            item = {
+                'slug': i.text.strip().replace(' ', '_').lower(),
+                'label': i.text.strip(),
+                'children': []
+            }
+        else:
+            for tag in i.recursiveChildGenerator():
+                try:
+                    del tag.attrs
+                except AttributeError:
+                    pass
+
+            del i['class']
+            del i['style']
+            del i['width']
+            item['children'].append(str(i).replace('\n', '').replace(' ', ''))
+
+    return res
 
 
 def parse_one(page_content):
@@ -36,45 +68,33 @@ def parse_one(page_content):
 
     # Unit of Competency
     parse_items = root.select('.content body > *')
-    item = {'slug': '', 'label': '', 'children': []}
+    res = parse_items_fn(parse_items)
 
-    for i in parse_items:
-        # print('--', i.name)
-        if i.name == 'h2':
-            show_item(item)
-            item = {
-                'slug': i.text.strip().replace(' ', '_').lower(),
-                'label': i.text.strip(),
-                'children': []
-            }
-        else:
-            item['children'].append(i)
+    return res
 
-    print('--- AAA ---')
-    # Assessment Requirements
-    parse_items = root.select('.content')[1].select
-    temp = {'slug': '', 'label': '', 'children': []}
-
-    if parse_items:
-        # for j in parse_items:
-        #     # print('--', j.name)
-        #     if j.name == 'h2':
-        #         show_item(item)
-        #         item = {
-        #             'slug': i.text.strip().replace(' ', '_').lower(),
-        #             'label': i.text.strip(),
-        #             'children': []
-        #         }
-        #     else:
-        #         item['children'].append(i)
-        print('-- AAA parsed --')
+    # print('--- AAA ---')
+    # # Assessment Requirements
+    # parse_items = root.select('.content')[1]
+    # parse_items = parse_items.select('body > *')
+    #
+    # if parse_items:
+    #     # parse_items_fn(parse_items)
+    #     print('-- AAA parsed --')
+    #
 
 
 def scrape_one(unit):
     file = open(unit_file_name(unit), 'r')
     page = file.read()
     file.close()
-    parse_one(page)
+    print('---')
+    print('--- ', unit, '-----------------------------------------------------------------')
+    print('---')
+    res = parse_one(page)
+
+    print(res)
+    with open(unit_json_name(unit), 'w', encoding='utf-8') as f:
+        json.dump(res, f, ensure_ascii=False, indent=4)
 
 
 def save_one(unit):
@@ -90,7 +110,7 @@ def save_one(unit):
 
 
 def scrape_cuv_40720():
-    units = ['BSBCRT411',  'CUADES411', 'CUADES412', 'CUADES301', 'CUADES302', 'CUADES303', 'CUADES304', 'CUADES305', 'CUAGRD312', 'CUAPPR411',  'CUAACD411', 'CUAGRD411', 'CUAPHI411',  'CUAPHI403', 'CUAWHS312']
+    units = ['BSBCRT411', 'CUADES411', 'CUADES412', 'CUADES301', 'CUADES302', 'CUADES303', 'CUADES304', 'CUADES305', 'CUAGRD312', 'CUAPPR411',  'CUAACD411', 'CUAGRD411', 'CUAPHI411',  'CUAPHI403', 'CUAWHS312']
 
     for i in units:
         # save_one(i)

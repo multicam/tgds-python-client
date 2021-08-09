@@ -1,0 +1,95 @@
+[
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with CUA Creative Arts and Culture Training Package Version 5.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "application",
+        "label": "Application",
+        "children": [
+            "<p>This unit describes the skills and knowledge required to source information on design history and theory, and to apply that information in the individual’s design work.</p>",
+            "<p>It applies to individuals who work in design and need to develop and maintain a general knowledge of design history and theory.</p>",
+            "<p>No licensing, legislative or certification requirements apply to this unit at the time of publication.</p>"
+        ]
+    },
+    {
+        "slug": "unit_sector",
+        "label": "Unit Sector",
+        "children": [
+            "<p>Design – Design Process</p>"
+        ]
+    },
+    {
+        "slug": "elements_and_performance_criteria",
+        "label": "Elements and Performance Criteria",
+        "children": [
+            "<table><tr><td><p><strong>ELEMENT</strong></p></td><td><p><strong>PERFORMANCE CRITERIA</strong></p></td></tr><tr><td><p><em>Elements describe the essential outcomes.</em></p></td><td><p><em>Performance criteria describe the performance needed to demonstrate achievement of the element.</em></p></td></tr><tr><td><p>1. Collect information on design history and theory</p></td><td><p>1.1 Identify and access applicable sources of information on design history and theory </p><p>1.2 Organise research material and findings for use in design practice, facilitating easy access and cross-referencing  </p></td></tr><tr><td><p>2. Apply information to own area of work</p></td><td><p>2.1 Evaluate information in the context of current design practice </p><p>2.2 Assess which aspects of information on design history and theory could be used or adapted to inform current practice </p><p>2.3 Apply understanding of own area of work using applicable information in culturally appropriate way </p></td></tr><tr><td><p>3. Update and maintain knowledge of design trends</p></td><td><p>3.1 Identify and use opportunities to update and expand knowledge of design trends and developments  </p><p>3.2 Incorporate and integrate knowledge into design activities</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "foundation_skills",
+        "label": "Foundation Skills",
+        "children": [
+            "<p><em>This section describes those language, literacy, numeracy and employment skills that are essential to performance but not explicit in the performance criteria.</em></p>",
+            "<table><tr><td><p><strong>S</strong><strong>KILL</strong></p></td><td><p><strong>DESCRIPTION</strong></p></td></tr><tr><td><p>Reading\t</p></td><td><ul><li>Identifies, interprets and evaluates information on historical and current design trends from different sources</li></ul></td></tr><tr><td><p>Writing</p></td><td><ul><li>Notes findings and sources of information for design knowledge, trends and developments</li><li>Documents information for colleagues and peers as requested</li></ul></td></tr><tr><td><p>Oral Communication</p></td><td><ul><li>Asks questions and clarifies information, listens to responses and shares ideas with others</li></ul></td></tr><tr><td><p>Self-management</p></td><td><ul><li>Understands main tasks, responsibilities and boundaries of own role </li><li>Takes responsibility for routine low-impact decisions within familiar situations </li></ul></td></tr><tr><td><p>Planning and organising</p></td><td><ul><li>Plans and implements required tasks</li></ul></td></tr><tr><td><p>Initiative and enterprise</p></td><td><ul><li>Contributes to new approaches within immediate work environment</li></ul></td></tr><tr><td><p>Technology</p></td><td><ul><li>Follows routine procedures for using digital technology to enter, store and retrieve information directly applicable to role</li></ul></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "unit_mapping_information",
+        "label": "Unit Mapping Information",
+        "children": [
+            "<p>Supersedes and is equivalent to BSBDES305 Source and apply information on the history and theory of design.</p>"
+        ]
+    },
+    {
+        "slug": "links",
+        "label": "Links",
+        "children": [
+            "<p>Companion Volume Implementation Guide is found on VETNet - <a>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5</a></p>"
+        ]
+    },
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with CUA Creative Arts and Culture Training Package Version 5.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "performance_evidence",
+        "label": "Performance Evidence",
+        "children": [
+            "<p>The candidate must demonstrate the ability to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including evidence of the ability to:</p>",
+            "<ul><li>identify features of the history and theory of design and how they can be adapted and applied to own work.</li></ul>",
+            "<p></p>",
+            "<p>In the course of the above, the candidate must:</p>",
+            "<ul><li>source and organise research findings on history and theory of design applicable to own work</li><li>identify one or more opportunities to expand on maintain currency of theoretical and design knowledge.</li></ul>"
+        ]
+    },
+    {
+        "slug": "knowledge_evidence",
+        "label": "Knowledge Evidence",
+        "children": [
+            "<p>The candidate must be able to demonstrate knowledge to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including knowledge of:</p>",
+            "<ul><li>current design trends in industry contexts applicable to that of one’s own work</li><li>evolution of design in industry contexts applicable to that of one’s own work</li><li>organisational information practices and their application in industry contexts applicable to that of one’s own work</li><li>sources of information on design history and theory applicable to own design work.</li></ul>"
+        ]
+    },
+    {
+        "slug": "assessment_conditions",
+        "label": "Assessment Conditions",
+        "children": [
+            "<p>Skills in this unit must be demonstrated in a workplace or simulated environment where the conditions are typical of those in a working environment in this industry. </p>",
+            "<p>This includes access to:</p>",
+            "<ul><li>sources of information on applicable industry history and theories of design.</li></ul>",
+            "<p></p>",
+            "<p>Assessors of this unit must satisfy the requirements for assessors in applicable vocational education and training legislation, frameworks and/or standards.</p>"
+        ]
+    }
+]

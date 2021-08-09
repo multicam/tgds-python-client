@@ -1,0 +1,96 @@
+[
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with CUA Creative Arts and Culture Training Package version 2.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "application",
+        "label": "Application",
+        "children": [
+            "<p>This unit describes the skills and knowledge required to enhance photo images ready for output. This process could be digital or using a wet darkroom.</p>",
+            "<p></p>",
+            "<p>It applies to individuals who use techniques to enhance and resolve the concept for the image. They may work in photo centres, specialised photo processing laboratories or photography studios.</p>",
+            "<p></p>",
+            "<p>No licensing, legislative or certification conditions apply to this unit at the time of publication.</p>"
+        ]
+    },
+    {
+        "slug": "unit_sector",
+        "label": "Unit Sector",
+        "children": [
+            "<p>Visual communication – photo imaging</p>"
+        ]
+    },
+    {
+        "slug": "elements_and_performance_criteria",
+        "label": "Elements and Performance Criteria",
+        "children": [
+            "<table><tr><td><p><strong>ELEMENT</strong></p></td><td><p><strong>PERFORMANCE CRITERIA</strong></p></td></tr><tr><td><p><em>Elements describe the essential outcomes.</em></p></td><td><p><em>Performance criteria describe the performance needed to demonstrate achievement of the element.</em></p></td></tr><tr><td><p>1. Plan image output</p></td><td><p>1.1 Clarify and confirm concept for final images in consultation with relevant personnel</p><p>1.2 Identify and select work prints or files and check that they are consistent with concept or brief</p><p>1.3 Assess qualities and characteristics of work prints or files suitable for enhancement and manipulation</p><p>1.4 Confirm output strategies, and materials and equipment needed to produce required image</p></td></tr><tr><td><p>2. Prepare for analog or digital work</p></td><td><p>2.1 Select darkroom or digital work environment to meet project requirements</p><p>2.2 Maintain clean and safe work environment during production of work</p><p>2.3 Set up relevant equipment safely and prepare materials for work</p></td></tr><tr><td><p>3. Enhance and manipulate images</p></td><td><p>3.1 Select techniques for image enhancement and manipulation consistent with concept, testing processes and purpose of work to produce optimal quality images</p><p>3.2 Identify screen-based issues for consideration where appropriate</p><p>3.3 Apply selected techniques to images</p></td></tr><tr><td><p>4. Output images</p></td><td><p>4.1 Select appropriate materials and equipment for output option</p><p>4.2 Produce output image by digital or analog means, and confirm that image meets project requirements with relevant personnel</p><p>4.3 Confirm that privacy, intellectual property and other relevant legal requirements are met</p></td></tr><tr><td><p>5. Complete post-shoot activities </p></td><td><p>5.1 Restore work area to original condition, disposing of waste safely</p><p>5.2 Clean and care for equipment according to manufacturer instructions</p><p>5.3 Store equipment according to workplace procedures</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "foundation_skills",
+        "label": "Foundation Skills",
+        "children": [
+            "<p><em>This section describes language, literacy, numeracy and employment skills incorporated in the performance criteria that are required for competent performance.</em></p>",
+            "<table><tr><td><p><strong>Skill</strong></p></td><td><p><strong>Performance</strong></p><p><strong>Criteria</strong></p></td><td><p><strong>Description</strong></p></td></tr><tr><td><p>Reading</p></td><td><p>5.2, 5.3</p></td><td><ul><li>Interprets straightforward instructions and procedures, including safety information, for application in the workplace</li></ul></td></tr><tr><td><p>Writing</p></td><td><p>1.1, 1.4</p></td><td><ul><li>Uses clear, uncomplicated language and industry-related terminology to request and clarify information from colleagues</li></ul></td></tr><tr><td><p>Oral Communication</p></td><td><p>1.1, 1.4, 4.2</p></td><td><ul><li>Articulates clearly using relevant language suitable to the context to gather information and confirm requirements</li><li>Uses listening and questioning techniques to confirm understanding</li></ul></td></tr><tr><td><p>Navigate the world of work</p></td><td><p>2.2, 2.3, 4.3, 5.1, 5.3</p></td><td><ul><li>Meets workplace expectations for safe preparation and completion of photo image work</li><li>Observes privacy and intellectual property responsibilities and other legal requirements related to image production work</li></ul></td></tr><tr><td><p>Interact with others </p></td><td><p>1.1, 1.4, 4.2</p></td><td><ul><li>Selects and uses accepted communication practices and procedures to discuss project requirements and confirm work outcomes with others</li></ul></td></tr><tr><td><p>Get the work done</p></td><td><p>1.2-1.4, 2.1-2.3, 3.1-3.3, 4.1, 4.2, 4.4, 5.1, 5.2 </p></td><td><ul><li>Plans and organises workload methodically for efficient and effective completion of tasks</li><li>Makes decisions directly related to completion of tasks, with input from others</li><li>Follows procedures related to work area and equipment</li></ul></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "unit_mapping_information",
+        "label": "Unit Mapping Information",
+        "children": [
+            "<table><tr><td><p><strong>Code and title </strong></p><p><strong>current version</strong></p></td><td><p><strong>Code and title</strong></p><p><strong>previous version</strong></p></td><td><p><strong>Comments</strong></p></td><td><p><strong>Equivalence status</strong></p></td></tr><tr><td><p>CUAPHI403 Enhance, manipulate and output photo images</p></td><td><p>CUVPHI404A Enhance, manipulate and output photo images</p></td><td><p>Updated to meet Standards for Training Packages.</p><p>Minor edits to elements and performance criteria. </p></td><td><p>Equivalent unit</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "links",
+        "label": "Links",
+        "children": [
+            "<p>Companion Volume implementation guides are found in VETNet - <a>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5</a></p>"
+        ]
+    },
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with CUA Creative Arts and Culture Training Package version 2.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "performance_evidence",
+        "label": "Performance Evidence",
+        "children": [
+            "<p>Evidence of the ability to:</p>",
+            "<ul><li>plans, selects and uses processes and outputting options to suit the job requirements and in accordance with workplace procedures. </li><li>produce a body of images that demonstrates command of enhancement and manipulation techniques</li><li>clean work areas and check and store equipment according to workplace requirements.</li></ul>",
+            "<p></p>",
+            "<p>Note: If a specific volume or frequency is not stated, then evidence must be provided at least once.</p>"
+        ]
+    },
+    {
+        "slug": "knowledge_evidence",
+        "label": "Knowledge Evidence",
+        "children": [
+            "<p>To complete the unit requirements safely and effectively, the individual must:</p>",
+            "<ul><li>outline the features of prints or files that can be enhanced or manipulated</li><li>describe common techniques for enhancing and manipulating images </li><li>describe a range of output equipment and materials that can be used in analog, digital or other print technologies </li><li>outline a range of output options</li><li>summarise work health and safety procedures for using darkroom equipment and materials and/ or using screens and keyboards for extended periods of time</li><li>outline intellectual property and other legislation relevant to image enhancement, manipulation and output.</li></ul>"
+        ]
+    },
+    {
+        "slug": "assessment_conditions",
+        "label": "Assessment Conditions",
+        "children": [
+            "<p>Assessment must be conducted in a safe environment where evidence gathered demonstrates consistent performance of typical activities experienced in creative arts industry environments. The assessment environment must include access to: </p>",
+            "<ul><li>photo imaging materials, tools and equipment.</li></ul>",
+            "<p></p>",
+            "<p>Assessors of this unit must satisfy the requirements for assessors in applicable vocational educational and training legislation, frameworks and/or standards.</p>"
+        ]
+    }
+]

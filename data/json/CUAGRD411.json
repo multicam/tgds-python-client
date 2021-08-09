@@ -1,0 +1,97 @@
+[
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with CUA Creative Arts and Culture Training Package Version 5.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "application",
+        "label": "Application",
+        "children": [
+            "<p>This unit describes the skills and knowledge required to research and apply techniques to produce graphic design work. It involves interpreting work briefs, organising resources, testing ideas, and refining approaches to a range of design challenges. </p>",
+            "<p>The unit applies to those still developing a full range of skills. Research, experimentation and refinement are used to produce a range of general design works. Individuals generally produce work independently, with guidance as required.</p>",
+            "<p>No licensing, legislative or certification requirements apply to this unit at the time of publication.</p>"
+        ]
+    },
+    {
+        "slug": "unit_sector",
+        "label": "Unit Sector",
+        "children": [
+            "<p>Visual Communication – Graphic Design</p>"
+        ]
+    },
+    {
+        "slug": "elements_and_performance_criteria",
+        "label": "Elements and Performance Criteria",
+        "children": [
+            "<table><tr><td><p><strong>ELEMENT</strong></p></td><td><p><strong>PERFORMANCE CRITERIA</strong></p></td></tr><tr><td><p><em>Elements describe the essential outcomes.</em></p></td><td><p><em>Performance criteria describe the performance needed to demonstrate achievement of the element.</em></p></td></tr><tr><td><p>1. Interpret and plan graphic design briefs</p></td><td><p>1.1 Interpret specifications in graphic design briefs and clarify issues with required personnel</p><p>1.2 Consider user or client requirements when making decisions about graphic design work</p><p>1.3 Research contemporary and historical information for briefs as required</p></td></tr><tr><td><p>2. Organise resources</p></td><td><p>2.1 Identify workspace and materials<strong></strong>required for graphic design work</p><p>2.2 Store files and completed documentation using standard industry procedures</p></td></tr><tr><td><p>3. Test graphic design approaches </p></td><td><p>3.1 Produce preliminary visual representations</p><p>3.2 Identify possible design approaches and critique in relation to the design brief</p><p>3.3 Select resources, materials and techniques required to test identified approaches.</p><p>3.4 Evaluate test outcomes against criteria and select the final design approach </p><p>3.5 Review own work and seek feedback as required</p></td></tr><tr><td><p>4. Produce graphic design work</p></td><td><p>4.1 Create graphic designs using selected design approach</p><p>4.2 Respond to feedback and refine graphic design work</p><p>4.3 Present design solution that meets the requirements of the design brief</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "foundation_skills",
+        "label": "Foundation Skills",
+        "children": [
+            "<p><em>This section describes those language, literacy, numeracy and employment skills that are essential to performance but not explicit in the performance criteria.</em></p>",
+            "<table><tr><td><p><strong>S</strong><strong>KILL</strong></p></td><td><p><strong>DESCRIPTION</strong></p></td></tr><tr><td><p>Reading</p></td><td><ul><li>Interprets detailed textual and visual information to inform ideas and determine design requirements</li></ul></td></tr><tr><td><p>Writing</p></td><td><ul><li>Uses clear language and industry related terminology to document idea development, testing and evaluation outcomes</li></ul></td></tr><tr><td><p>Oral Communication</p></td><td><ul><li>Articulates using clear and direct language to determine requirements and seek feedback</li><li>Uses listening and questioning techniques to confirm understanding</li></ul></td></tr><tr><td><p>Self-management</p></td><td><ul><li>Takes responsibility for safe use and maintenance of resources and follows required procedures for their registration and storage</li></ul></td></tr><tr><td><p>Teamwork </p></td><td><ul><li>Selects and uses appropriate communication techniques to confirm requirements and request feedback from others</li></ul></td></tr><tr><td><p>Planning and organising </p></td><td><ul><li>Plans, organises and completes work to meet established time requirements</li><li>Identifies resources suited to a range of graphic design work and analyses task requirements to make appropriate choices</li></ul></td></tr><tr><td><p>Problem solving</p></td><td><ul><li>Analyses scope of exploratory techniques required and critically evaluates effectiveness of test samples against established criteria for designs</li><li>Determines final design choice based on test results and client requirements</li><li>Produces, refines, documents and presents final graphic design solutions that meet creative and technical requirements</li></ul></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "unit_mapping_information",
+        "label": "Unit Mapping Information",
+        "children": [
+            "<p>Supersedes and is equivalent to CUAGRD401 Research and apply graphic design techniques.</p>"
+        ]
+    },
+    {
+        "slug": "links",
+        "label": "Links",
+        "children": [
+            "<p>Companion Volume Implementation Guide is found on VETNet - <a>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5</a></p>"
+        ]
+    },
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with CUA Creative Arts and Culture Training Package Version 5.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "performance_evidence",
+        "label": "Performance Evidence",
+        "children": [
+            "<p>The candidate must demonstrate the ability to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including evidence of the ability to:</p>",
+            "<ul><li>produce graphic work using different techniques that meet the requirements of at least two briefs.</li></ul>",
+            "<p></p>",
+            "<p>In the course of the above, the candidate must:</p>",
+            "<ul><li>interpret information in briefs and related research</li><li>select and care for required resources </li><li>test graphic design methods and techniques and document outcomes and design approaches.</li></ul>"
+        ]
+    },
+    {
+        "slug": "knowledge_evidence",
+        "label": "Knowledge Evidence",
+        "children": [
+            "<p>The candidate must be able to demonstrate knowledge to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including knowledge of:</p>",
+            "<ul><li>techniques for using experimentation in developing and refining graphic design work</li><li>importance of researching information about graphic design when completing design work</li><li>typical information found in graphic design briefs</li><li>typical parameters and constraints to be considered when interpreting design briefs, including:</li></ul>",
+            "<ul><li>intellectual property considerations</li><li>availability of resources</li><li>time and budget</li></ul>",
+            "<ul><li>common techniques, materials, tools and equipment used in graphic design</li><li>health and safety requirements related to establishing work space and using materials and equipment for graphic design work.</li></ul>"
+        ]
+    },
+    {
+        "slug": "assessment_conditions",
+        "label": "Assessment Conditions",
+        "children": [
+            "<p>Skills in this unit must be demonstrated in a workplace or simulated environment where the conditions are typical of those in a working environment in this industry. </p>",
+            "<p>This includes access to:</p>",
+            "<ul><li>graphic design briefs</li><li>information sources for graphic design research</li><li>equipment and tools used to produce graphic design work</li><li>opportunities for discussion and feedback.</li></ul>",
+            "<p></p>",
+            "<p>Assessors of this unit must satisfy the requirements for assessors in applicable vocational educational and training legislation, frameworks and/or standards.</p>"
+        ]
+    }
+]

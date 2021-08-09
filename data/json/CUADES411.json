@@ -1,0 +1,95 @@
+[
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with CUA Creative Arts and Culture Training Package Version 5.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "application",
+        "label": "Application",
+        "children": [
+            "<p>This unit describes the skills and knowledge required to generate design solutions in response to a particular design need. </p>",
+            "<p>The unit applies to those who generate concepts and solutions in response to a design challenge in any industry context. The starting point may be an open or closed brief; a spontaneous idea; modification of an existing product, service, process or system; or a point in an ongoing design process.</p>",
+            "<p>No licensing, legislative or certification requirements apply to this unit at the time of publication.</p>"
+        ]
+    },
+    {
+        "slug": "unit_sector",
+        "label": "Unit Sector",
+        "children": [
+            "<p>Design – Design Process</p>"
+        ]
+    },
+    {
+        "slug": "elements_and_performance_criteria",
+        "label": "Elements and Performance Criteria",
+        "children": [
+            "<table><tr><td><p><strong>ELEMENT</strong></p></td><td><p><strong>PERFORMANCE CRITERIA</strong></p></td></tr><tr><td><p><em>Elements describe the essential outcomes.</em></p></td><td><p><em>Performance criteria describe the performance needed to demonstrate achievement of the element.</em></p></td></tr><tr><td><p>1 Define the design challenge</p></td><td><p>1.1 Determine and evaluate stakeholder needs </p><p>1.2 Clarify specifications, parameters and constraints of the design challenge in consultation with required personnel</p><p>1.3 Articulate essence of the design challenge in a format that meets stakeholder requirements</p></td></tr><tr><td><p>2 Undertake research to inform the design solution</p></td><td><p>2.1 Source and evaluate information that may assist in responding to the design challenge </p><p>2.2 Determine historical, current and future perspectives and trends that might inform design solutions </p><p>2.3 Identify applicable social, economic, environmental, ethical and cultural issues that may impact design solutions </p><p>2.4 Analyse, distil and collate information to inform the development of the design solution </p></td></tr><tr><td><p>3 Communicate and collaborate with others</p></td><td><p>3.1 Establish and develop working relationships with required personnel </p><p>3.2 Seek and integrate input and ideas from others during design process</p><p>3.3 Inform key stakeholders about progress of the design and related implications </p><p>3.4 Negotiate and agree on any changed requirements or modifications</p></td></tr><tr><td><p>4 Generate ideas and responses to the design challenge</p></td><td><p>4.1 Examine and integrate ideas generated from research and consultation </p><p>4.2 Generate different options and ideas using creative thinking techniques </p></td></tr><tr><td><p>5 Select a design solution</p></td><td><p>5.1 Evaluate different options and ideas using developed criteria </p><p>5.2 Select a solution based on agreed criteria and in consultation with required personnel </p><p>5.3 Adjust and refine proposed design solution based on research, testing and reflection </p><p>5.4 Present proposed design solution with applicable supporting documentation according to project requirements </p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "foundation_skills",
+        "label": "Foundation Skills",
+        "children": [
+            "<p><em>This section describes those language, literacy, numeracy and employment skills that are essential to performance but not explicit in the performance criteria.</em></p>",
+            "<table><tr><td><p><strong>S</strong><strong>KILL</strong></p></td><td><p><strong>DESCRIPTION</strong></p></td></tr><tr><td><p>Reading</p></td><td><ul><li>Researches, collates and analyses textual information from different sources</li></ul></td></tr><tr><td><p>Writing</p></td><td><ul><li>Documents ideas, sources and concepts using applicable formats and specific language </li><li>Refines and edits work </li></ul></td></tr><tr><td><p>Oral Communication</p></td><td><ul><li>Participates in verbal exchanges of ideas and elicits views and opinions of others using listening and questioning techniques</li><li>Clarifies, explains or presents information relating to design solution using clear and specific language applicable for audience</li></ul></td></tr><tr><td><p>Numeracy</p></td><td><ul><li>Interprets numeric data and applies mathematical calculations applicable to design solution </li></ul></td></tr><tr><td><p>Self-management</p></td><td><ul><li>Understands nature and purpose of own role and associated responsibilities and how it contributes to the work of others in immediate work context</li><li>Selects the applicable form, channel and mode of communication for a specific purpose required for own role</li></ul></td></tr><tr><td><p>Teamwork</p></td><td><ul><li>Cooperates with others as part of familiar routine activities and contributes to specific activities requiring joint responsibility and accountability</li></ul></td></tr><tr><td><p>Planning and organising</p></td><td><ul><li>Takes responsibility for planning and implementing required tasks  </li></ul></td></tr><tr><td><p>Problem-solving</p></td><td><ul><li>Analyses and evaluates information systematically to aid in decision making and problem solving</li></ul></td></tr><tr><td><p>Initiative and enterprise</p></td><td><ul><li>Applies some basic principles of lateral thinking to generate new or innovative ideas</li></ul></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "unit_mapping_information",
+        "label": "Unit Mapping Information",
+        "children": [
+            "<p>Supersedes and is equivalent to BSBDES401 Generate design solutions.</p>"
+        ]
+    },
+    {
+        "slug": "links",
+        "label": "Links",
+        "children": [
+            "<p>Companion Volume Implementation Guide is found on VETNet - <a>https://vetnet.gov.au/Pages/TrainingDocs.aspx?q=1db201d9-4006-4430-839f-382ef6b803d5</a></p>"
+        ]
+    },
+    {
+        "slug": "modification_history",
+        "label": "Modification History",
+        "children": [
+            "<table><tr><td><p><strong>Release</strong></p></td><td><p><strong>Comments</strong></p></td></tr><tr><td><p>Release 1</p></td><td><p>This version first released with CUA Creative Arts and Culture Training Package Version 5.0.</p></td></tr></table>",
+            "<p></p>"
+        ]
+    },
+    {
+        "slug": "performance_evidence",
+        "label": "Performance Evidence",
+        "children": [
+            "<p>The candidate must demonstrate the ability to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including evidence of the ability to:</p>",
+            "<ul><li>generate design solutions according to at least two different stakeholder needs.</li></ul>",
+            "<p></p>",
+            "<p>In the course of the above, the candidate must:</p>",
+            "<ul><li>develop and document a design solution through research, reflection, and generation and refinement of ideas</li><li>apply principles of functionality, ergonomics, aesthetics and sustainability to the development of ideas</li><li>communicate effectively in collaboration with others in the design process.</li></ul>"
+        ]
+    },
+    {
+        "slug": "knowledge_evidence",
+        "label": "Knowledge Evidence",
+        "children": [
+            "<p>The candidate must be able to demonstrate knowledge to complete the tasks outlined in the elements, performance criteria and foundation skills of this unit, including knowledge of: </p>",
+            "<ul><li>elements and principles of design and their application in the applicable design context</li><li>key features of the wider industry, and the economic, social and historical context design solutions are being generated in</li><li>design trends and technologies, including other designs and the work of other design practitioners in the relevant industry context</li><li>sources of information that support the development of technical and other knowledge</li><li>materials, tools, equipment, techniques and processes used in the generation of design solutions in the applicable industry context.</li></ul>"
+        ]
+    },
+    {
+        "slug": "assessment_conditions",
+        "label": "Assessment Conditions",
+        "children": [
+            "<p>Skills in this unit must be demonstrated in a workplace or simulated environment where the conditions are typical of those in a working environment in this industry. </p>",
+            "<p>This includes access to:</p>",
+            "<ul><li>interaction with others for the collaborative nature of the design process</li><li>sources of information on design for the applicable industry context.</li></ul>",
+            "<p></p>",
+            "<p>Assessors of this unit must satisfy the requirements for assessors in applicable vocational education and training legislation, frameworks and/or standards. </p>"
+        ]
+    }
+]
